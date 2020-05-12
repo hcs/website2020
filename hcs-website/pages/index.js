@@ -1,6 +1,7 @@
 import Layout from '../components/layout.js';
 import styles from './index.module.css';
 import { Element, animateScroll, Events } from 'react-scroll';
+import Link from 'next/link'
 
 export default class MainPage extends React.Component {
   constructor(props) {
@@ -53,13 +54,14 @@ export default class MainPage extends React.Component {
           <div className={styles.heading}>
             {this.state.titleText}<span style={{ display: this.state.showCursor ? "inline" : "none" }} className={styles.cursor}>&#9647;</span>
           </div>
-        </div> 
+        </div>
         <Element name="test">
           Content<br />
           Content<br />
           Content<br />
           Content<br />
           Content<br />
+          Read <Link href="/faq"><a>FAQ!</a></Link>
         </Element>
       </Layout>
     );

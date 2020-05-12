@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
-    "next": "9.3.6",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "^9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scroll": "^1.7.16",
     "react-transition-group": "^4.3.0"
   }
