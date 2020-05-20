@@ -1,0 +1,22 @@
+.landingimage {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.heading {
+  font-size: 70px;
+  font-weight: bold;
+  padding: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+  color: white;
+  word-spacing: 100vw;
+}
+
+.cursor {
+  font-size: 70px;
+}
