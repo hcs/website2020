@@ -1,0 +1,32 @@
+.calendar {
+}
+
+.calendarTitle {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+
+.calendarList {
+  list-style-type: none;
+}
+
+.event {
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  margin: 10px;
+  background-color: #f88;
+}
+
+.date {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: black;
+}
