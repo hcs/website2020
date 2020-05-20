@@ -1,0 +1,61 @@
+.main {
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: white;
+}
+
+.navList {
+  list-style-type: none;
+}
+
+.navSubList {
+  position: absolute;
+  list-style-type: none;
+  top: 100%;
+}
+
+.navListSubLi {
+  background-color: white;
+}
+
+.navListLi {
+  display: inline-block;
+  margin: 0px 40px;
+  position: relative;
+}
+
+.navListLiRight {
+  float: right;
+}
+
+.navListA, .navSubListA {
+  text-decoration: none;
+  display: block;
+  color: black;
+  padding: 20px;
+}
+
+.navListA:hover, .navSubListA:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.navListA:hover {
+  background-color: red;
+}
+
+.navSubListA:hover {
+  background-color: grey;
+}
+
+.footer {
+  background-color: #aaa;
+  padding: 20px;
+  text-align: center;
+}

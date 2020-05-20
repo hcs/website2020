@@ -1,0 +1,35 @@
+.button {
+  padding: 15px;
+  font-size: 16px;
+  box-shadow: none;
+  border-radius: 23px;
+  border: 1px solid #aaa;
+  margin: 10px;
+  width: 150px;
+  transition: background-color 0.5s;
+}
+
+.inputText {
+  margin: 20px auto;
+  display: block;
+  padding: 8px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #8e8;
+}
+
+.title {
+  font-size: 40px;
+  margin: 30px 20px 20px 20px;
+  font-weight: normal;
+}
+
+.wrap {
+  text-align: center;
+}
