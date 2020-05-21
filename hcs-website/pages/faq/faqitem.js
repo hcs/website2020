@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import React from 'react';
-import Layout from '../components/layout.js';
+import Layout from '../../components/layout.js';
 import styles from './faq.module.css';
-import ReactDOM from 'react-dom';
 
 export default class FAQItem extends React.Component {
     constructor(props) {
@@ -15,17 +14,23 @@ export default class FAQItem extends React.Component {
 
     toggle = () => {
       this.setState({
-        open: !this.state.open;
+        open: !this.state.open
       })
     }
 
     render () {
       return (
-        <div>
-          <button onClick={() => this.toggle()}>Expand</button>
-          <div>{this.props.title}</div>
-          <div>{this.props.body}</div>
-        </div>
+        //<div className = {styles.body}>
+          <div className = {styles.container}>
+            <div className = {styles.accordion}>
+                <a>{this.props.title}</a>
+                  <div className = {styles.content + (this.state.open ? " " + styles.active : "")}>
+                    <p>{this.props.body}</p>
+                  </div>
+                <button onClick={() => this.toggle()}>+</button>
+            </div>
+          </div>
+        //</div>
       )
     }
 }
