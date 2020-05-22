@@ -116,11 +116,6 @@ export default class PeoplePage extends React.Component {
               <div>
               {this.community.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio}/>)};
               </div>
-
-
-
-
-
           </div>
         //</Layout>
       );

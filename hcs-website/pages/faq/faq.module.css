@@ -24,11 +24,43 @@
   min-height: 100vh;
 }
 
+.expandcollapse {
+  width: 90px;
+  color: white;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 2px;
+  background-color: #851526;
+  position:absolute;
+  height:30px;
+  right:190px;
+  top:175px;
+  /* margin: auto; */
+
+}
+
+
+.faq {
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Luminari;
+  padding: 10px;
+}
+
+
+.subtitle {
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 58rem;
+}
+
+
 
 .container {
   margin: 0 auto;
-  padding: 2rem;
-  width: 48rem;
+  padding: 0.5rem;
+  width: 60rem;
 }
 /*
 
@@ -62,16 +94,16 @@ h3 {
 .accordion a:hover,
 .accordion a:hover::after {
   cursor: pointer;
-  color: #03b5d2;
+  color: #851526;
 }
 
 .accordion a:hover::after {
-  border: 1px solid #03b5d2;
+  border: 1px solid #851526;
 }
 
 .accordion a.active {
-  color: #03b5d2;
-  border-bottom: 1px solid #03b5d2;
+  color: #851526;
+  border-bottom: 1px solid #851526;
 }
 
 .accordion a::after {
@@ -95,8 +127,8 @@ h3 {
 .accordion a.active::after {
   font-family: 'Ionicons';
   content: '\f209';
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
+  color: #851526;
+  border: 1px solid #851526;
 }
 
 .accordion .content {
