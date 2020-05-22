@@ -19,9 +19,10 @@ export default class MainPage extends React.Component {
     ];
 
     this.blocksData = [
-      { text: "Account", color: "#99f", html: this.getAccount },
-      { text: "Resources", color: "#aaa", html: this.getResources },
-      { text: "BIP Program", color: "#f99" }
+      { text: "Account", color: "#bbf", html: this.getAccount },
+      { text: "About us", color: "#eee", html: this.getAbout },
+      { text: "Resources", color: "#ccc", html: this.getResources },
+      { text: "BIP Program", color: "#fbb" }
     ];
 
     this.minTitleHeight = 550;
@@ -32,6 +33,20 @@ export default class MainPage extends React.Component {
       calendarOpacity: 0,
       blinkCount: 0
     }
+  }
+  
+  getAbout() {
+    let links = [
+      { title: "Our Mission", href: "/" },
+      { title: "Board", href: "/" },
+    ];
+    return (
+      <div className={styles.accountList}>
+        {links.map(item => (
+          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+        ))}
+      </div>
+    );
   }
 
   getAccount() {
@@ -148,17 +163,23 @@ export default class MainPage extends React.Component {
             <Calendar />
           </div>
         </div> 
-        <div className={styles.blocks}>
-          {this.blocksData.map(this.renderBlock)}
-        </div>
-        <div className={styles.newsHeader}>
-          <h1>News</h1>
-        </div>
-        <div className={styles.news}>
-          {this.newsData.slice(0, 3).map(this.renderNewsCard)}
-        </div>
-        <div className={styles.subscribeWrap}>
-          <Subscribe />
+        <div className={styles.content}>
+          <h1 className={styles.largest}>{"Harvard's Largest CS Organization on Campus"}</h1>
+          <div className={styles.logoWrap}>
+            <img className={styles.logo} width="200" height="auto" src="/logo.min.svg"></img>
+          </div>
+          <div className={styles.blocks}>
+            {this.blocksData.map(this.renderBlock)}
+          </div>
+          <div className={styles.newsHeader}>
+            <h1>News</h1>
+          </div>
+          <div className={styles.news}>
+            {this.newsData.slice(0, 3).map(this.renderNewsCard)}
+          </div>
+          <div className={styles.subscribeWrap}>
+            <Subscribe />
+         </div>
         </div>
       </Layout>
     );

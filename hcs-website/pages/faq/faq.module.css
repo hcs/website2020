@@ -4,7 +4,12 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400');
 
 
-.body {
+/* *, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+} */
+
+.wrap {
   margin: 0;
   padding: 0;
   font-family: 'Hind', sans-serif;
@@ -14,13 +19,15 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 50px;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 
 .container {
   margin: 0 auto;
-  padding: 4rem;
+  padding: 2rem;
   width: 48rem;
 }
 /*
@@ -76,8 +83,8 @@ h3 {
   font-size: 1rem;
   color: #7288a2;
   padding: 5px;
-  width: 30px;
-  height: 30px;
+  width: 1rem;
+  height: 1rem;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;

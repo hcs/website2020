@@ -22,6 +22,11 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Ionicons";
+  src: url("/fonts/Ionicons/ionicons.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;

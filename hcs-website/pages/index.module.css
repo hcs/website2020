@@ -4,7 +4,7 @@
   background-color: black;
   position: relative;
   background-image: url("/widener.jpg");
-  z-index: -1;
+  z-index: -10;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,9 +65,15 @@
 }
 
 .block {
-  width: 33.3%;
+  width: 25%;
   display: inline-block;
   height: 400px;
+}
+
+@media (max-width: 1000px) {
+  .block {
+    width: 50%;
+  }
 }
 
 .blockBody {
@@ -115,7 +121,7 @@
   width: 120px;
   border-radius: 26px;
   text-decoration: none;
-  border: 1px solid #eee;
+  border: 1px solid #aaa;
   transition: background-color 0.5s;
 }
 
@@ -169,4 +175,22 @@
 
 .newsMore:hover {
   background-color: #eee;
+}
+
+.largest {
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+}
+
+.content {
+  z-index: 10;
+  padding: 100px 10px;
+  background-color: white;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  margin: 50px auto;
 }
