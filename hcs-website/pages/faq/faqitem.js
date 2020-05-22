@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react';
-import Layout from '../components/layout.js';
 import styles from './faq.module.css';
-import ReactDOM from 'react-dom';
 
 export default class FAQItem extends React.Component {
     constructor(props) {
@@ -15,7 +13,7 @@ export default class FAQItem extends React.Component {
 
     toggle = () => {
       this.setState({
-        open: !this.state.open;
+        open: !this.state.open
       })
     }
 
