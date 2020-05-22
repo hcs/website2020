@@ -22,7 +22,7 @@
 
 
 
-/* h2 {
+.h2 {
   width: 100%;
   padding: 1em;
   margin: 0;
@@ -33,11 +33,11 @@
   letter-spacing: 1px;
   font-size: 1.4em;
 }
-
+/*
 h1,
 h2 {
   font-family: 'Roboto', sans-serif;
-} */
+} */ 
 
 .employeeswrapper {
   max-width: 1170px;

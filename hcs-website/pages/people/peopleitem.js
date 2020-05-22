@@ -15,9 +15,9 @@ export default class PeopleItem extends React.Component {
                 <div className = {styles.employeelist}>
                   <ul>
                     <li>
-                        <a className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>Marketing</span>
+                        <a className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>HCS</span>
                         </a>
-                        <a className = {styles.name}>{this.props.bio}<span className = {styles.jobtitle}>Bio</span>
+                        <a className = {styles.bio}>{this.props.bio}<span className = {styles.jobtitle}>Bio</span>
                         </a>
                     </li>
                   </ul>
@@ -25,11 +25,7 @@ export default class PeopleItem extends React.Component {
 
                 <div className = {styles.employeepics}>
                   <div className = {styles.picframe}>
-                    <div>
-                      <img src={this.props.pic} alt=''></img>
-                    </div>
-                    <p className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>Strategist</span>
-                    </p>
+                    <img src={this.props.pic} alt=''></img>
                   </div>
                 </div>
             </div>
