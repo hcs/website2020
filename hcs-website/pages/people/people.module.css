@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Roboto:300,400,700');
+
+/* * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+} */
+
+/* a {
+  text-decoration: none;
+} */
+
+.container {
+  width: 100%;
+  position: relative;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: auto;
+}
+
+
+
+/* h2 {
+  width: 100%;
+  padding: 1em;
+  margin: 0;
+  display: block;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+}
+
+h1,
+h2 {
+  font-family: 'Roboto', sans-serif;
+} */
+
+.employeeswrapper {
+  max-width: 1170px;
+  margin: auto;
+  border: 1px solid #dbdbdb;
+  display: flex;
+}
+
+.employeelist {
+  width: 230px;
+  padding: 1em;
+}
+
+.employeelist ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.employeelist .name, .name {
+    text-decoration: none;
+    color: #3c9bbf;
+    background-color: rgba(255,255,255,0);
+    font-size: 1.7em;
+    display: block;
+    padding: .5em 0;
+    font-weight: 600;
+    font-variant: all-petite-caps;
+}
+
+.jobtitle {
+  display: block;
+  color: gray;
+  font-size: .7em;
+  font-weight: 400;
+}
+
+.employeepics {
+  flex-basis: 400px;
+  padding: .5em;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.employeepics .name {
+  display: none;
+  font-size: 1.8em;
+}
+
+.employeepics .picframe {
+    width: calc(33% - 1em);
+    filter: saturate(0);
+    height: 260px;
+    display: inline-block;
+    margin: .5em;
+}
+
+
+.employeepics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .employeelist,
+  .employeepics {
+    padding: 1em;
+  }
+  .employeepics {
+    justify-content: flex-start;
+  }
+  .employeepics .picframe {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .employeeswrapper {
+    flex-wrap: wrap;
+    max-width: 500px;
+  }
+  /* h2 {
+    font-size: 1.4em;
+    text-align: center;
+  } */
+  .employeepics .name {
+    display: block;
+    text-align: center;
+    padding: .5em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  .employeelist,
+  .employeepics {
+    width: 100%;
+    text-align: center;
+  }
+  .employeepics {
+    justify-content: center;
+  }
+  .employeepics .picframe {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    margin: 0;
+    padding: 1em 0 0;
+    filter: saturate(1) !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .employeepics .picframe {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  /* h1 {
+    font-size: 1.3em;
+  } */
+}
+
+@media only screen and (max-width: 400px) {
+  .employeepics .picframe {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  /* h1 {
+    font-size: 1.2em;
+  } */
+}
