@@ -12,15 +12,13 @@
 .container {
   width: 100%;
   position: relative;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: "Roboto";
 }
 
 .wrapper {
   max-width: 1170px;
   margin: auto;
 }
-
-
 
 .h2 {
   width: 100%;
@@ -37,17 +35,18 @@
 h1,
 h2 {
   font-family: 'Roboto', sans-serif;
-} */ 
+} */
 
 .employeeswrapper {
-  max-width: 1170px;
+  max-width: 1100px;
   margin: auto;
   border: 1px solid #dbdbdb;
   display: flex;
 }
 
 .employeelist {
-  width: 230px;
+  width: 500px;
+  line-height: 150%;
   padding: 1em;
 }
 
@@ -58,13 +57,12 @@ h2 {
 
 .employeelist .name, .name {
     text-decoration: none;
-    color: #3c9bbf;
+    color: #851526;
     background-color: rgba(255,255,255,0);
-    font-size: 1.7em;
+    font-size: 1.5em;
     display: block;
     padding: .5em 0;
-    font-weight: 600;
-    font-variant: all-petite-caps;
+    font-weight: 500;
 }
 
 .jobtitle {

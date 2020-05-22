@@ -10,10 +10,20 @@ export default class Layout extends React.Component {
       links: [
         { href: "/", title: "Home" },
         { href: "/about-us", title: "About", right: true, subitems: [
-          { href: "/about-us", title: "About us" },
+          { href: "/about", title: "About us" },
           { href: "/faq", title: "FAQ" },
-          { href: "/sponsors", title: "Sponsors" }
-        ] }
+          { href: "/sponsors", title: "Sponsors" },
+          ]
+        },
+        { href: "/get-involved", title: "Get Involved", right:true, subitems: [
+          { href: "/comp", title: "Comp"},
+          { href: "/bip", title: "BIP"}
+          ]
+        },
+        { href: "/contact", title: "Contact", right:true, subitems: [
+          {href: "/people", title: "HCS Board"},
+          {href: "/tech", title: "HCS Tech"}
+        ]}
       ]
     };
   }

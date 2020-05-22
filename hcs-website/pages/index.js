@@ -14,8 +14,8 @@ export default class MainPage extends React.Component {
     this.numBlinks = 7;
 
     this.newsData = [
-      { title: "Updates to the Comp", body: "Due to situation posed by Covid-19, HCS comp this semester will look a little different than planned. The changes are outlined below:", href: "/" },
-      { title: "Hosting through Harvard's Zoom", body: "You can access Harvard's Enterprise Zoom features by connecting through your HarvardKey. This allows you to host meetings with unlimited time and member allowance. We've realized a lot of people have been using free Zoom accounts, which have some annoying limits.", href: "/" }
+      { title: "Updates to the Comp", body: "Due to situation posed by Covid-19, HCS comp this semester will look a little different than planned. The changes are outlined below:", href: "/comp" },
+      { title: "Hosting through Harvard's Zoom", body: "You can access Harvard's Enterprise Zoom features by connecting through your HarvardKey. This allows you to host meetings with unlimited time and member allowance. We've realized a lot of people have been using free Zoom accounts, which have some annoying limits.", href: "https://harvard.zoom.us/" }
     ];
 
     this.blocksData = [
@@ -34,7 +34,7 @@ export default class MainPage extends React.Component {
       blinkCount: 0
     }
   }
-  
+
   getAbout() {
     let links = [
       { title: "Our Mission", href: "/" },
@@ -63,7 +63,7 @@ export default class MainPage extends React.Component {
       </div>
     );
   }
-  
+
   getResources() {
     let links = [
       { title: "Tutorials", href: "/" },
@@ -105,7 +105,7 @@ export default class MainPage extends React.Component {
       }
     }, this.titleTypeSpeed);
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scroll);
     window.addEventListener("resize", this.scroll);
@@ -140,7 +140,7 @@ export default class MainPage extends React.Component {
         </div>
       </div>
     );
-  } 
+  }
 
   render() {
     let calendarStyle = {
@@ -162,7 +162,7 @@ export default class MainPage extends React.Component {
           <div className={styles.calendarWrap} style={calendarStyle}>
             <Calendar />
           </div>
-        </div> 
+        </div>
         <div className={styles.content}>
           <h1 className={styles.largest}>{"Harvard's Largest CS Organization on Campus"}</h1>
           <div className={styles.logoWrap}>

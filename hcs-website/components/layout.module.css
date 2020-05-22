@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: 5;
-  background-color: white;
+  background-color: black;
 }
 
 .navList {
@@ -21,7 +21,7 @@
 }
 
 .navListSubLi {
-  background-color: white;
+  background-color: black;
 }
 
 .navListLi {
@@ -37,7 +37,7 @@
 .navListA, .navSubListA {
   text-decoration: none;
   display: block;
-  color: black;
+  color: white;
   padding: 20px;
 }
 
@@ -47,11 +47,11 @@
 }
 
 .navListA:hover {
-  background-color: red;
+  background-color: #851526;
 }
 
 .navSubListA:hover {
-  background-color: grey;
+  background-color: #851526;
 }
 
 .footer {
