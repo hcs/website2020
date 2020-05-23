@@ -2,16 +2,14 @@ import Link from 'next/link'
 import React from 'react';
 import Layout from '../components/layout.js';
 import styles from './about.module.css';
-import Item from './faq/FAQItem.js';
+import Item from './faq/faqitem.js';
 import Button from 'react-bootstrap/Button';
 
 export default class About extends React.Component {
     constructor(props) {
       super(props);
       this.general = [
-          {title: "Systems", body:
-            <p>HCS runs the web server {' '}<Link href="/">www.hcs.harvard.edu</Link>, and the mailing list server {' '}<a href="lists.hcs.harvard.edu">lists.hcs.harvard.edu</a>. This means that most student groups on campus use our Linux machines to host their web sites and administer their email lists. More info on Systems can be found on the {' '} <a href="/about/systems">Systems page</a>. Thanks to a recent grant from FAS IT, we've just spent over $30,000 completely rebuilding our systems from the ground up, which means we're now in a position to do lots of cool projects.
-            </p>},
+          {title: "Systems", body: <p>HCS runs the web server <Link href="/"><a>www.hcs.harvard.edu</a></Link>, and the mailing list server <Link href="lists.hcs.harvard.edu"><a>lists.hcs.harvard.edu</a></Link>. This means that most student groups on campus use our Linux machines to host their web sites and administer their email lists. More info on Systems can be found on the <Link href="/about/systems"><a>Systems page</a></Link>. Thanks to a recent grant from FAS IT, we've just spent over $30,000 completely rebuilding our systems from the ground up, which means we're now in a position to do lots of cool projects.</p>},
           {title: "Education", body: "The history of HCS dated back to 1983, making it older than most of our current members. HCS was founded to publish the Harvard Computer Review and Computing@Harvard. Fun fact: 2020 is the 20th anniversary of our mailing list service."},
           {title: "Account Services", body: "HCS is an incredibly tight-knit community that bonds throughout various community events. This semester, we ordered lots of delicious foods, including ramdon (Parasite), Shake Shack, Otto’s pizza, etc. Stay updated about our upcoming events where you can enjoy good foods and good company."},
           {title: "Speakers", body: "HCS reserves the right to terminate usage to any of its services at any time for any reason."},
