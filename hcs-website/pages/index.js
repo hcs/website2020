@@ -38,7 +38,7 @@ export default class MainPage extends React.Component {
   getAbout() {
     let links = [
       { title: "Our Mission", href: "/" },
-      { title: "Board", href: "/" },
+      { title: "Board", href: "/people" },
     ];
     return (
       <div className={styles.accountList}>

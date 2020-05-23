@@ -76,7 +76,7 @@ export default class PeoplePage extends React.Component {
       return(
         <Layout>
           <div>
-          <img src="/boardphoto.jpg" alt="Board photo" width="624" height="416" title="We look gorgeous!" className = {styles.imagecenter}></img>
+          <img src="/boardphoto.jpg" alt="Board photo" width="936" height="624" title="We look gorgeous!" className = {styles.imagecenter}></img>
           <a href = "mailto: hcs-board@hcs.harvard.edu">
           <img src="/gmail.jpg" width="40" height="40" className = {styles.imagecenter}></img>
           </a>
