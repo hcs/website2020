@@ -10,6 +10,16 @@
 } */
 
 
+.hcs {
+  margin-top: 90px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hoefler Text;
+  padding: 10px;
+  font-weight: normal;
+  color: black;
+}
 
 .imagecenter {
   display: block;

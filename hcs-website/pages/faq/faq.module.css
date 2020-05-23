@@ -19,7 +19,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
+  margin-top: 80px;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -39,13 +39,14 @@
 
 }
 
-
 .faq {
   margin: auto;
   text-align: center;
-  font-size: 3rem;
-  font-family: Luminari;
+  font-size: 40px;
+  font-family: Hoefler Text;
   padding: 10px;
+  font-weight: normal;
+  color: black;
 }
 
 

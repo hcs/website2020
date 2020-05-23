@@ -72,7 +72,7 @@ export default class Layout extends React.Component {
       <div className={styles.main}>
         <Head>
           <title>Harvard Computer Society</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/hcslogo.png" />
         </Head>
         <div className={styles.nav}>
           <ul className={styles.navList}>
