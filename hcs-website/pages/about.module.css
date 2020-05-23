@@ -1,22 +1,158 @@
-.landingimage {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
+/* This is the CSS code from https://codepen.io/kathykato/pen/MoZJom
+ some parts are commented out because I got errors*/
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+
+/* *, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+} */
+
+.wrap {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.heading {
-  font-size: 70px;
-  font-weight: bold;
-  padding: 20px;
-  font-family: "Lucida Console", Monaco, monospace;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translate(0%, -50%);
+.expandcollapse {
+  width: 90px;
   color: white;
-  word-spacing: 100vw;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 2px;
+  background-color: #851526;
+  position:absolute;
+  height:30px;
+  right:190px;
+  top:175px;
+  /* margin: auto; */
+
 }
 
-.cursor {
-  font-size: 70px;
+
+.about {
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Luminari;
+  padding: 10px;
+}
+
+
+.subtitle {
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 58rem;
+}
+
+
+
+.container {
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 58rem;
+}
+/*
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+*/
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #851526;
+}
+
+.accordion a:hover::after {
+  border: 1px solid #851526;
+}
+
+.accordion a.active {
+  color: #851526;
+  border-bottom: 1px solid #851526;
+}
+
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 1rem;
+  height: 1rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #851526;
+  border: 1px solid #851526;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
 }
