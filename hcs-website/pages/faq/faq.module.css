@@ -73,7 +73,7 @@ h3 {
 }
 */
 
-.accordion a {
+.accordionA {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,22 +92,22 @@ h3 {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.accordion a:hover,
-.accordion a:hover::after {
+.accordionA:hover,
+.accordionA:hover::after {
   cursor: pointer;
   color: #851526;
 }
 
-.accordion a:hover::after {
+.accordionA:hover::after {
   border: 1px solid #851526;
 }
 
-.accordion a.active {
+.accordionA.active {
   color: #851526;
   border-bottom: 1px solid #851526;
 }
 
-.accordion a::after {
+.accordionA::after {
   font-family: 'Ionicons';
   content: '\f218';
   position: absolute;
@@ -125,7 +125,7 @@ h3 {
   text-align: center;
 }
 
-.accordion a.active::after {
+.accordionA.active::after {
   font-family: 'Ionicons';
   content: '\f209';
   color: #851526;
