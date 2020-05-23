@@ -10,6 +10,7 @@ export default class PeopleItem extends React.Component {
 
     render () {
       return (
+
         <div className = {styles.container}>
             <div className = {styles.employeeswrapper}>
 
@@ -22,7 +23,7 @@ export default class PeopleItem extends React.Component {
                 <div className = {styles.employeelist}>
                   <ul>
                     <li>
-                        <a className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>HCS '20</span>
+                        <a className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>{this.props.avatar}</span>
                         </a>
                         <a className = {styles.bio}>{this.props.bio}<span className = {styles.jobtitle}></span>
                         </a>
