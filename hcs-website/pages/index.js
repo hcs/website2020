@@ -14,15 +14,32 @@ export default class MainPage extends React.Component {
     this.numBlinks = 7;
 
     this.newsData = [
-      { title: "Updates to the Comp", body: "Due to situation posed by Covid-19, HCS comp this semester will look a little different than planned. The changes are outlined below:", href: "/comp" },
-      { title: "Hosting through Harvard's Zoom", body: "You can access Harvard's Enterprise Zoom features by connecting through your HarvardKey. This allows you to host meetings with unlimited time and member allowance. We've realized a lot of people have been using free Zoom accounts, which have some annoying limits.", href: "https://harvard.zoom.us/" }
+      { title: "Updates to the Comp",
+      body: "Due to situation posed by Covid-19, HCS comp this semester will look a little different than planned. Only 2 bootcamps out of 4 will be required to become a HCS member. See more information at the Comp page.",
+      href: "/comp",
+      action: "Comp" },
+
+      { title: "Hosting on Harvard's Zoom",
+      body: "You can access Harvard's Enterprise Zoom features by connecting through your HarvardKey. This allows you to host meetings with unlimited time and member allowance. We've realized a lot of people have been using free Zoom accounts, which have some annoying limits.",
+      href: "https://harvard.zoom.us/",
+      action: "Host" },
+
+      { title: "Join HCS Slack",
+      body: "Please join HCS Slack to receive important updates about HCS' community events, mentorship programs, bootcamp information, and CS internships/recruitment information.",
+      href: "https://join.slack.com/t/hcs-community/shared_invite/zt-e22nxuja-GIpRC7asDmNw8IfLWqlFjg",
+      action: "Join" },
+
+      { title: "HCS community survey",
+      body: "If you are a member, please take some time to fill out the following survey on the HCS Community. This survey should only take a few minutes to complete.",
+      href: "https://forms.gle/kAorrhv5fEL7whEe7",
+      action: "Join"}
     ];
 
     this.blocksData = [
-      { text: "Account", color: "#bbf", html: this.getAccount },
-      { text: "About us", color: "#eee", html: this.getAbout },
-      { text: "Resources", color: "#ccc", html: this.getResources },
-      { text: "BIP Program", color: "#fbb" }
+      { text: "About us", color: "#AC3B61", html: this.getAbout },
+      { text: "Get Involved", color: "#A47A69", html: this.getInvolved },
+      { text: "Account", color: "#123c69", html: this.getAccount },
+      { text: "Resources", color: "#069593", html: this.getResources }
     ];
 
     this.minTitleHeight = 550;
@@ -71,7 +88,20 @@ export default class MainPage extends React.Component {
     ];
     return (
       <div className={styles.accountList}>
-        <p className={styles.resourcesText}>Having trouble setting up or accessing your website or mailing list?</p>
+        {links.map(item => (
+          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+        ))}
+      </div>
+    );
+  }
+
+  getInvolved() {
+    let links = [
+      { title: "Comp", href: "/comp" },
+      { title: "BIP", href: "/bip" },
+    ];
+    return (
+      <div className={styles.accountList}>
         {links.map(item => (
           <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
         ))}
@@ -125,7 +155,7 @@ export default class MainPage extends React.Component {
         <div className={styles.newsCardTitle}>
           <h2 className={styles.newsTitle}>{data.title}</h2>
           <p className={styles.newsBody}>{data.body}</p>
-          <Link href={data.href}><a className={styles.newsMore}>Learn more</a></Link>
+          <Link href={data.href}><a className={styles.newsMore}>{data.action}</a></Link>
         </div>
       </div>
     );
@@ -164,7 +194,7 @@ export default class MainPage extends React.Component {
           </div>
         </div>
         <div className={styles.content}>
-          <h1 className={styles.largest}>{"Harvard's Largest CS Organization on Campus"}</h1>
+          <h1 className={styles.largest}>{"Harvard's Largest CS Organization on Campus. Est. 1983."}</h1>
           <div className={styles.logoWrap}>
             <img className={styles.logo} width="200" height="auto" src="/logo.min.svg"></img>
           </div>
