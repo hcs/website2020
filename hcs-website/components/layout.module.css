@@ -7,26 +7,31 @@
   left: 0;
   right: 0;
   z-index: 5;
-  background-color: black;
+  background-color: #A51C30;
 }
 
 .navList {
   list-style-type: none;
+  padding: 0px 40px;
+  margin: 0 auto;
 }
 
 .navSubList {
   position: absolute;
   list-style-type: none;
   top: 100%;
+  min-width: 100%;
 }
 
 .navListSubLi {
   background-color: black;
+  white-space: nowrap;
+  min-width: 100%;
 }
 
 .navListLi {
   display: inline-block;
-  margin: 0px 40px;
+  margin: 0px 20px;
   position: relative;
 }
 

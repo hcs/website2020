@@ -5,9 +5,9 @@ export default class Calendar extends React.Component {
     super(props);
 
     this.events = [
-      { start: new Date(2020, 1, 4, 5), end: new Date(2020, 1, 4, 6) },
-      { start: new Date(2020, 1, 5, 5), end: new Date(2020, 1, 4, 6) },
-      { start: new Date(2020, 1, 6, 5), end: new Date(2020, 1, 4, 6) },
+      { start: new Date(2020, 1, 4, 5), end: new Date(2020, 1, 4, 6), name: "OCaml Bee: Presented by Jane Street" },
+      { start: new Date(2020, 1, 5, 5), end: new Date(2020, 1, 4, 6), name: "Community Workshops" },
+      { start: new Date(2020, 1, 6, 5), end: new Date(2020, 1, 4, 6), name: "Bootcamp #3" },
     ];
   }
 
@@ -17,12 +17,12 @@ export default class Calendar extends React.Component {
 
     return (
       <li className={styles.event}>
+        <p className={styles.description}>
+          {e.name}
+        </p>
         <div className={styles.date}>
           {day}
         </div>
-        <p className={styles.description}>
-          OCaml Bee, brought to you by Jane Street!
-        </p>
       </li>
     );
   }

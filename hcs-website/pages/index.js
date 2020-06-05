@@ -32,24 +32,31 @@ export default class MainPage extends React.Component {
       { title: "HCS community survey",
       body: "If you are a member, please take some time to fill out the following survey on the HCS Community. This survey should only take a few minutes to complete.",
       href: "https://forms.gle/kAorrhv5fEL7whEe7",
-      action: "Join"}
+      action: "Join"},
     ];
 
     this.blocksData = [
-      { text: "About us", color: "#AC3B61", html: this.getAbout },
+      { text: "About us", color: "#AC3B61", html: this.getAbout, backgroundUrl: "/boardphoto.jpg" },
       { text: "Get Involved", color: "#A47A69", html: this.getInvolved },
-      { text: "Account", color: "#123c69", html: this.getAccount },
+      { text: "Account", color: "#123c69", html: this.getAccount, backgroundUrl: "/hcs_login.png" },
       { text: "Resources", color: "#069593", html: this.getResources }
     ];
 
     this.minTitleHeight = 550;
 
     this.state = {
-      showCursor: true,
+      showCursor: false,
       nextTitleIdx: 0,
       calendarOpacity: 0,
+      bigImageOpacity: 0,
+      newsOffset: 0,
       blinkCount: 0
     }
+    this.moreNews = this.moreNews.bind(this);
+    this.backNews = this.backNews.bind(this);
+    this.resize = this.resize.bind(this);
+    this.scroll = this.scroll.bind(this);
+    this.newsItemWidth = 349;
   }
 
   getAbout() {
@@ -58,10 +65,15 @@ export default class MainPage extends React.Component {
       { title: "Board", href: "/people" },
     ];
     return (
-      <div className={styles.accountList}>
-        {links.map(item => (
-          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
-        ))}
+      <div>
+        <div className={styles.aboutText}>
+          Dedicated to promoting interest in computing and information technologies among members of the Harvard community
+        </div>
+        <div className={styles.accountList}>
+          {links.map(item => (
+            <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+          ))}
+        </div>
       </div>
     );
   }
@@ -74,6 +86,9 @@ export default class MainPage extends React.Component {
     ];
     return (
       <div className={styles.accountList}>
+        <div className={styles.resourcesText}>
+          Make an account to request our free website hosting services, or sign in to your mailing list portal with your HarvardKey to make an email list.
+        </div>
         {links.map(item => (
           <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
         ))}
@@ -88,6 +103,9 @@ export default class MainPage extends React.Component {
     ];
     return (
       <div className={styles.accountList}>
+        <div className={styles.resourcesText}>
+          Having trouble with your website or mailing list? Check out our guides!
+        </div>
         {links.map(item => (
           <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
         ))}
@@ -97,56 +115,79 @@ export default class MainPage extends React.Component {
 
   getInvolved() {
     let links = [
-      { title: "Comp", href: "/comp" },
-      { title: "BIP", href: "/bip" },
+      { title: "Sign up", href: "/comp" },
     ];
     return (
-      <div className={styles.accountList}>
-        {links.map(item => (
-          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
-        ))}
+      <div>
+        <div className={styles.involvedText}>
+          Comp HCS!
+        </div>
+        <div className={styles.involvedTextSmall}>
+          Our comp runs every semester.
+        </div>
+        <div className={styles.accountList}>
+          {links.map(item => (
+            <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+          ))}
+        </div>
       </div>
     );
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.scroll);
-    window.addEventListener("resize", this.scroll);
-    this.titleInterval = setInterval(() => {
-      if(this.state.nextTitleIdx < this.fullTitleText.length) {
-        this.setState({
-          nextTitleIdx: this.state.nextTitleIdx + 1
-        });
-      } else {
-        this.setState({
-          calendarOpacity: 1
-        });
-        clearInterval(this.titleInterval);
-        this.titleInterval = setInterval(() => {
-          if(this.state.blinkCount >= this.numBlinks) {
-            clearInterval(this.titleInterval);
-          } else {
-            this.setState({
-              showCursor: !this.state.showCursor,
-              blinkCount: this.state.blinkCount + 1
-            });
-          }
-        }, this.cursorBlinkSpeed);
-      }
-    }, this.titleTypeSpeed);
+    window.addEventListener("resize", this.resize);
+    setTimeout(() => {
+      this.setState({
+        bigimageOpacity: 1
+      });
+    });
+    setTimeout(() => {
+      this.setState({
+        showCursor: true
+      });
+      this.titleInterval = setInterval(() => {
+        if(this.state.nextTitleIdx < this.fullTitleText.length) {
+          this.setState({
+            nextTitleIdx: this.state.nextTitleIdx + 1
+          });
+        } else {
+          this.setState({
+            calendarOpacity: 1
+          });
+          clearInterval(this.titleInterval);
+          this.titleInterval = setInterval(() => {
+            if(this.state.blinkCount >= this.numBlinks) {
+              clearInterval(this.titleInterval);
+            } else {
+              this.setState({
+                showCursor: !this.state.showCursor,
+                blinkCount: this.state.blinkCount + 1
+              });
+            }
+          }, this.cursorBlinkSpeed);
+        }
+      }, this.titleTypeSpeed);
+    }, 500);
+    this.calculateMaxNewsOffset();
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scroll);
-    window.addEventListener("resize", this.scroll);
+    window.addEventListener("resize", this.resize);
   }
 
-  scroll = () => {
+  scroll() {
     if(window.scrollY < this.minTitleHeight) {
       this.setState({
         titleHeight: Math.max(window.innerHeight - window.scrollY, this.minTitleHeight),
       });
     }
+  }
+
+  resize() {
+    this.scroll();
+    this.calculateMaxNewsOffset();
   }
 
   renderNewsCard(data) {
@@ -162,14 +203,45 @@ export default class MainPage extends React.Component {
   }
 
   renderBlock(data) {
+    let style = { backgroundColor: data.color };
+    if(data.backgroundUrl) {
+      style = { backgroundImage: "url(" + data.backgroundUrl + ")" };
+    }
     return (
       <div className={styles.block}>
-        <div className={styles.blockBody} style={{ backgroundColor: data.color }}>
+        <div className={styles.blockBody} style={style}>
           <p className={styles.blockBodyP}>{data.text}</p>
-          {data.html ? data.html() : null}
+          <div className={styles.blockHtml}>
+            {data.html ? data.html() : null}
+          </div>
         </div>
       </div>
     );
+  }
+
+  calculateMaxNewsOffset() {
+    if(this.newsData.length) {
+      this.maxNewsOffset = this.newsData.length * this.newsItemWidth - this.newsItemWidth * Math.floor((Math.min(window.innerWidth - 40, 1580)) / this.newsItemWidth);
+      this.setState({
+        newsOffset: Math.max(this.state.newsOffset, -this.maxNewsOffset)
+      });
+    } else {
+      this.maxNewsOffset = 0;
+    }
+  }
+
+  moreNews() {
+    if(this.state.newsOffset - this.newsItemWidth >= -this.maxNewsOffset) {
+      this.setState({
+        newsOffset: this.state.newsOffset - this.newsItemWidth
+      });
+    }
+  }
+  
+  backNews() {
+    this.setState({
+      newsOffset: Math.min(this.state.newsOffset + this.newsItemWidth, 0)
+    });
   }
 
   render() {
@@ -182,6 +254,8 @@ export default class MainPage extends React.Component {
     return (
       <Layout>
         <div className={styles.landingimage} style={{ height: this.state.titleHeight }}>
+          <div className={styles.bigimage} style={{ opacity: this.state.bigimageOpacity }}>
+          </div>
           <div className={styles.heading}>
             <div className={styles.headingText}>
               {this.fullTitleText.substr(0, this.state.nextTitleIdx)}
@@ -205,7 +279,19 @@ export default class MainPage extends React.Component {
             <h1>News</h1>
           </div>
           <div className={styles.news}>
-            {this.newsData.slice(0, 3).map(this.renderNewsCard)}
+            <div className={styles.newsBackBar} style={{ opacity: this.state.newsOffset < 0 ? 1 : 0, visibility: this.state.newsOffset < 0 ? "visible" : "hidden"}}>
+              <div className={styles.newsMoreBarButton} onClick={this.backNews}>
+                &larr;
+              </div>
+            </div>
+            <div className={styles.newsMove} style={{ left: this.state.newsOffset + "px" }}>
+              {this.newsData.map(this.renderNewsCard)}
+            </div>
+            <div className={styles.newsMoreBar} style={{ opacity: this.state.newsOffset > -this.maxNewsOffset ? 1 : 0, visibility: this.state.newsOffset > -this.maxNewsOffset ? "visible" : "hidden"}}>
+              <div className={styles.newsMoreBarButton} onClick={this.moreNews}>
+                &rarr;
+              </div>
+            </div>
           </div>
           <div className={styles.subscribeWrap}>
             <Subscribe />

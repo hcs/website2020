@@ -12,16 +12,20 @@
 .inputText {
   margin: 20px auto;
   display: block;
-  padding: 8px;
-  width: 300px;
+  padding: 12px;
+  width: 400px;
+  box-sizing: border-box;
   border-radius: 5px;
   font-size: 15px;
+  display: inline-block;
   box-shadow: none;
+  border: 2px solid #A51C30;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: #8e8;
+  background-color: #A51C30;
+  color: white;
 }
 
 .title {
@@ -32,4 +36,22 @@
 
 .wrap {
   text-align: center;
+}
+
+.submit {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 20px;
+  box-shadow: 1px;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #666;
+  transition: background-color 0.5s;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: rgb(6, 149, 147);
+  color: white;
 }

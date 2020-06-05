@@ -2,10 +2,14 @@
 }
 
 .calendarTitle {
-  color: #FFF0BA;
+  border: 3px solid #A51C30;
+  background-color: #eee;
   font-size: 30px;
+  color: #A51C30;
+  padding: 10px;
   text-align: center;
   margin: 15px;
+  position: relative;
 }
 
 .calendarList {
@@ -13,20 +17,29 @@
 }
 
 .event {
-  color: white;
-  border-radius: 5px;
-  padding: 20px;
+  color: #A51C30;
+  padding: 15px 20px;
   width: 300px;
   margin: 10px;
-  background-color: rgba(250, 150, 150, 0.8);
+  background-color: #eee;
+  position: relative;
+}
+
+.event::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: #B74959;
 }
 
 .date {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .description {
+  font-weight: bold;
   color: black;
+  margin-bottom: 15px;
 }

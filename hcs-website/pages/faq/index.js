@@ -36,7 +36,6 @@ export default class FAQPage extends React.Component {
           //<Button variant="outline-warning">Warning</Button>
           <div className={styles.wrap}>
               <h1 className = {styles.faq}>Frequently Asked Questions</h1>
-              <button className = {styles.expandcollapse}>Expand All</button>
               <h2 className = {styles.subtitle}>General</h2>
               {this.general.map(item => <FAQItem title={item.title} body={item.body} />)};
               <h2 className = {styles.subtitle}>Get Involved</h2>
