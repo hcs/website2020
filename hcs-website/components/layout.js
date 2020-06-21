@@ -12,8 +12,7 @@ export default class Layout extends React.Component {
         { href: "/about-us", title: "About", right: true, subitems: [
           { href: "/about", title: "About us" },
           { href: "/faq", title: "FAQ" },
-          { href: "/sponsors", title: "Sponsors" },
-          { href: "/csharvard", title: "CS@Harvard" },
+          { href: "/sponsors", title: "Sponsors" }
           ]
         },
         { href: "/get-involved", title: "Get Involved", right:true, subitems: [
@@ -22,8 +21,7 @@ export default class Layout extends React.Component {
           ]
         },
         { href: "/contact", title: "Contact", right:true, subitems: [
-          {href: "/people", title: "HCS Board"},
-          {href: "/tech", title: "HCS Tech"}
+          {href: "/people", title: "HCS Board"}
         ]}
       ]
     };

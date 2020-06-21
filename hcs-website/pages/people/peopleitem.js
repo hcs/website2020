@@ -8,32 +8,22 @@ export default class PeopleItem extends React.Component {
       super(props);
     }
 
-    render () {
+    render() {
       return (
-
-        <div className = {styles.container}>
-            <div className = {styles.employeeswrapper}>
-
-                <div className = {styles.employeepics}>
-                  <div className = {styles.picframe}>
-                    <img src={this.props.pic} alt=''></img>
-                  </div>
-                </div>
-
-                <div className = {styles.employeelist}>
-                  <ul>
-                    <li>
-                        <a className = {styles.name}>{this.props.name}<span className = {styles.jobtitle}>{this.props.avatar}</span>
-                        </a>
-                        <a className = {styles.bio}>{this.props.bio}<span className = {styles.jobtitle}></span>
-                        </a>
-                    </li>
-                  </ul>
-                </div>
-
+            <div className = {styles.boxes}>
+                <div className = {styles.box}>
+                    <div className = {styles.pics}>
+                        <img src={this.props.pic}></img>
+                    </div>
+                    <div className = {styles.personalintro}>
+                            <a className = {styles.name}>{this.props.name}</a>
+                            <a className = {styles.bio}>{this.props.bio}</a>
+                    </div>
+                    <img src="/github.png" className = {styles.icon}></img>
+                    <img src="/linkedin.png" className = {styles.icon}></img>
+                    <img src="/gmail.png" className = {styles.icon}></img>
+                 </div>
             </div>
-          </div>
-
       )
     }
 }
