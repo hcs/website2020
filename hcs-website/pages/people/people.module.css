@@ -15,7 +15,6 @@
   margin-bottom: 10px;
   text-align: center;
   font-size: 40px;
-  font-family: Hoefler Text;
   padding: 10px;
   font-weight: normal;
   color: black;
@@ -63,8 +62,10 @@ h2 {
 
 .employeeswrapper {
   max-width: 1100px;
-  margin: auto;
+  margin: 10px auto;
   border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  background-color: #f4f4f4;
   display: flex;
 }
 
@@ -113,9 +114,12 @@ h2 {
 
 .employeepics .picframe {
     width: calc(50%);
+    border-radius: 25px;
     /* filter: saturate(0); */
     height: 260px;
     display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
     margin: .5em;
 }
 

@@ -178,11 +178,6 @@ export default class MainPage extends React.Component {
   }
 
   scroll() {
-    if(window.scrollY < this.minTitleHeight) {
-      this.setState({
-        titleHeight: Math.max(window.innerHeight - window.scrollY, this.minTitleHeight),
-      });
-    }
   }
 
   resize() {
@@ -268,9 +263,11 @@ export default class MainPage extends React.Component {
           </div>
         </div>
         <div className={styles.content}>
-          <h1 className={styles.largest}>{"Harvard's Largest CS Organization on Campus. Est. 1983."}</h1>
-          <div className={styles.logoWrap}>
-            <img className={styles.logo} width="200" height="auto" src="/logo.min.svg"></img>
+          <div className={styles.topStuff}>
+            <h1 className={styles.largest}>Harvard's Largest CS Organization on Campus.<br /> Est. 1983.</h1>
+            <div className={styles.logoWrap}>
+              <img className={styles.logo} width="200" height="auto" src="/logo.min.svg"></img>
+            </div>
           </div>
           <div className={styles.blocks}>
             {this.blocksData.map(this.renderBlock)}

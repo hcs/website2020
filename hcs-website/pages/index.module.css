@@ -59,6 +59,7 @@
   padding: 10px;
   white-space: nowrap;
   overflow: hidden;
+  background-color: #94c9a9;
   position: relative;
 }
 
@@ -150,9 +151,14 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .blockBody {
+    margin: 10px;
+  }
+}
+
 .blockBody {
   padding: 40px 40px;
-  margin: 10px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -193,9 +199,9 @@
 .calendarWrap {
   position: absolute;
   transform: translateY(-10px);
-  transition: all 1s;
+  transition: transform 1s, opacity 1s;
+  text-align: center;
   right: 0;
-  height: 100%;
   padding: 20vh 5vw;
 }
 
@@ -235,9 +241,8 @@
 }
 
 .newsHeader {
-  margin: 30px 30px 10px 30px;
-  border-top: 2px solid #eee;
-  padding-top: 30px;
+  padding: 30px 30px 10px 30px;
+  background-color: #94c9a9;
 }
 
 .newsHeader h1 {
@@ -318,11 +323,12 @@
 }
 
 .content {
+  background-color: #A51C30;
   z-index: 10;
-  padding: 100px 10px;
+  padding: 100px 0px;
   max-width: 1600px;
   margin: auto;
-  background-color: white;
+  color: white;
 }
 
 .logo {
@@ -356,4 +362,21 @@
 .newsMove {
   position: relative;
   transition: left 0.4s;
+}
+
+@media (max-width: 800px) {
+  .heading {
+    height: 60%;
+    text-align: center;
+  }
+  
+  .block {
+    width: 100%;
+  }
+
+  .calendarWrap {
+    position: static;
+    transform: none;
+    padding: 50vh 5vw;
+  }
 }

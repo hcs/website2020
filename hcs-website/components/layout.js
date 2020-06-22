@@ -7,6 +7,7 @@ export default class Layout extends React.Component {
     super(props);
 
     this.state = {
+      collapsed: true,
       links: [
         { href: "/", title: "Home" },
         { href: "/about-us", title: "About", right: true, subitems: [
@@ -27,19 +28,16 @@ export default class Layout extends React.Component {
         ]}
       ]
     };
+    this.toggleCollapse = this.toggleCollapse.bind(this);
   }
 
-  mouseChange = (index, val) => {
-    let links = [ ...this.state.links ];
-    links[index].expand = val;
-    this.setState({
-      links: links
-    });
-  }
-
-  renderNavSubitems = (link) => {
-    return (
-      <ul className={styles.navSubList}>
+  renderNavSubitems = (link, index) => {
+    console.log(link);
+    return [
+      <div key={"expand"} className={styles.expandItem} onClick={() => {this.toggleItem(index)} }>
+        <img width={30} height={30} src={link.expanded ? "/chevron-up-outline.svg" : "/chevron-down-outline.svg"}></img>
+      </div>,
+      <ul key={"list"} className={styles.navSubList + (link.expanded ? styles.expanded : "")}>
         {link.subitems.map((item, index) =>
           <li key={"subitem" + index} className={styles.navListSubLi}>
             <Link href={item.href}>
@@ -48,23 +46,37 @@ export default class Layout extends React.Component {
           </li>
         )}
       </ul>
-    );
+    ];
+  }
+
+  toggleItem(index) {
+    this.state.links[index].expanded = !!!this.state.links[index].expanded;
+    this.setState({
+      links: this.state.links
+    });
   }
 
   renderNavItem = (link, index) => {
     return (
       <li
         key={"item" + index}
-        onMouseEnter={() => { this.mouseChange(index, true) }}
-        onMouseLeave={() => { this.mouseChange(index, false) }}
-        className={styles.navListLi + (link.right ? (" " + styles.navListLiRight) : "")}
+        className={styles.navListLi +
+          (link.right ? (" " + styles.navListLiRight) : "") + " " +
+          (!this.state.collapsed ? styles.open : "")
+        }
       >
         <Link href={link.href}>
           <a className={styles.navListA}>{link.title}</a>
         </Link>
-        {(link.expand && link.subitems) ? this.renderNavSubitems(link) : null}
+        {(link.subitems) ? this.renderNavSubitems(link, index) : null}
       </li>
     );
+  }
+
+  toggleCollapse() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
   }
 
   render() {
@@ -76,6 +88,14 @@ export default class Layout extends React.Component {
         </Head>
         <div className={styles.nav}>
           <ul className={styles.navList}>
+            <li className={styles.navImage}>
+              <Link href="/">
+                <a><img width={50} height={50} src="/hcslogo2.png"></img></a>
+              </Link>
+            </li>
+            <li className={styles.navListCollapse} onClick={this.toggleCollapse}>
+              <img width={40} height={40} src={this.state.collapsed ? "/menu-outline.svg" : "/close-outline.svg"}></img>
+            </li>
             {this.state.links.map(this.renderNavItem)}
           </ul>
         </div>

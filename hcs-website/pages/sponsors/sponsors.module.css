@@ -1,0 +1,65 @@
+.sponsor {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.group {
+  padding: 50px;
+}
+
+.image {
+  height: auto;
+  margin: 15px 30px;
+}
+
+.sponsorName {
+  font-size: 25px;
+  font-weight: normal;
+  padding: 10px;
+}
+
+.sponsorsList {
+  text-align: center;
+}
+
+.title {
+  padding: 100px 10px 40px 10px;
+  text-align: center;
+  font-size: 40px;
+  background-color: #eee;
+  font-weight: normal;
+}
+
+.gold {
+  background-color: #AF9500;
+}
+
+.gold .image {
+  width: 600px;
+}
+
+.silver {
+  background-color: #B4B4B4;
+}
+
+.silver .image {
+  width: 400px;
+}
+
+.bronze {
+  background-color: #AD8A56;
+  padding-bottom: 60px;
+}
+
+.bronze .image {
+  width: 300px;
+}
+
+.groupTitle {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 35px;
+  font-weight: normal;
+}

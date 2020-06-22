@@ -15,8 +15,7 @@ export default class PeopleItem extends React.Component {
             <div className = {styles.employeeswrapper}>
 
                 <div className = {styles.employeepics}>
-                  <div className = {styles.picframe}>
-                    <img src={this.props.pic} alt=''></img>
+                  <div className = {styles.picframe} style={{ background: "url(" + this.props.pic + ")" }}>
                   </div>
                 </div>
 
