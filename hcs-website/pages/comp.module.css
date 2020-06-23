@@ -18,7 +18,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   margin-top: 80px;
   flex-direction: column;
   min-height: 100vh;
@@ -40,7 +40,7 @@
 }
 
 
-.about {
+.comp {
   margin: auto;
   text-align: center;
   font-size: 40px;
@@ -50,6 +50,12 @@
   color: black;
 }
 
+.bullet {
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 58rem;
+  padding-left: 4rem;
+}
 
 .subtitle {
   margin: 0 auto;
@@ -62,7 +68,6 @@
 .container {
   margin: 0 auto;
   padding: 0.5rem;
-  line-height: 26px;
   width: 58rem;
 }
 /*
