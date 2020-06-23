@@ -2,11 +2,30 @@
   padding: 15px;
   font-size: 16px;
   box-shadow: none;
+  text-align: center;
   border-radius: 23px;
+  display: inline-block;
   border: 1px solid #aaa;
   margin: 10px;
-  width: 150px;
+  width: 200px;
   transition: background-color 0.5s;
+}
+
+.checkList {
+  width: 25px;
+  vertical-align: middle;
+  height: 25px;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.listText {
+  vertical-align: center;
+  line-height: 20px;
+  margin: 10px;
+  font-size: 20px;
+  display: inline-block;
 }
 
 .inputText {

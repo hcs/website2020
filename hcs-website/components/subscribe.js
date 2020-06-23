@@ -14,7 +14,10 @@ export default class Subscribe extends React.Component {
 
   renderList(list) {
     return (
-      <button className={styles.button} type="button">{list}</button>
+      <div className={styles.button}>
+        <div className={styles.checkList} />
+        <div className={styles.listText}>{list}</div>
+      </div>
     );
   }
 
