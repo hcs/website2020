@@ -22,6 +22,8 @@
   margin-top: 80px;
   flex-direction: column;
   min-height: 100vh;
+  line-height: 30px;
+
 }
 
 .expandcollapse {
@@ -48,6 +50,7 @@
   padding: 10px;
   font-weight: normal;
   color: black;
+
 }
 
 
@@ -62,7 +65,7 @@
 .container {
   margin: 0 auto;
   padding: 0.5rem;
-  line-height: 26px;
+  line-height: 30px;
   width: 58rem;
 }
 /*
@@ -144,6 +147,7 @@ h3 {
   -webkit-transition: all 0.2s ease 0.15s;
   -o-transition: all 0.2s ease 0.15s;
   transition: all 0.2s ease 0.15s;
+
 }
 
 .accordion .content p {
