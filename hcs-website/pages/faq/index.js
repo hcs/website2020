@@ -33,7 +33,6 @@ export default class FAQPage extends React.Component {
     render () {
       return(
         <Layout>
-          //<Button variant="outline-warning">Warning</Button>
           <div className={styles.wrap}>
               <h1 className = {styles.faq}>Frequently Asked Questions</h1>
               <h2 className = {styles.subtitle}>General</h2>

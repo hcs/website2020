@@ -22,6 +22,7 @@
   margin-top: 80px;
   flex-direction: column;
   min-height: 100vh;
+  margin-bottom: 50px;
 }
 
 .expandcollapse {
@@ -53,22 +54,19 @@
 .bullet {
   margin: 0 auto;
   padding: 0.5rem;
-  width: 58rem;
   padding-left: 4rem;
 }
 
 .subtitle {
   margin: 0 auto;
   padding: 1.5rem;
-  width: 58rem;
 }
 
 
 
 .container {
   margin: 0 auto;
-  padding: 0.5rem;
-  width: 58rem;
+  padding: 0.5rem 1.5rem;
 }
 /*
 
@@ -91,7 +89,6 @@ h3 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
   padding: 1rem 3rem 1rem 1rem;
   color: #7288a2;
   font-size: 1.15rem;

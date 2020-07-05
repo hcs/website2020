@@ -3,12 +3,11 @@
   font-size: 16px;
   box-shadow: none;
   text-align: center;
-  border-radius: 23px;
   display: inline-block;
-  border: 1px solid #aaa;
   margin: 10px;
-  width: 200px;
   transition: background-color 0.5s;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.3);
 }
 
 .checkList {
@@ -30,16 +29,19 @@
 
 .inputText {
   margin: 20px auto;
-  display: block;
   padding: 15px;
   text-align: center;
-  width: 100%;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
   background-color: #eee;
   box-sizing: border-box;
   font-size: 20px;
+  line-height: 20px;
   display: inline-block;
   box-shadow: none;
   border: none;
+  vertical-align: middle;
 }
 
 .button:hover {
@@ -58,23 +60,30 @@
 .wrap {
   text-align: center;
   padding: 20px 0px;
-  background-color: #94c9a9;
+  background-color: #5171A5;
 }
 
 .submit {
   display: inline-block;
-  padding: 14px 30px;
-  margin: 20px;
-  box-shadow: 1px;
-  background-color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  border: 1px solid #666;
+  padding: 19px 50px;
+  margin: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  box-shadow: none;
+  border: none;
+  vertical-align: middle;
   transition: background-color 0.5s;
+  color: white;
+  background-color: #A51C30;
+  opacity: 0.8;
 }
 
 .submit:hover {
   cursor: pointer;
-  background-color: #111;
-  color: white;
+  opacity: 1;
+}
+
+.content {
+  max-width: 1600px;
+  margin: auto;
 }

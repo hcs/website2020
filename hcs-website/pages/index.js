@@ -8,7 +8,7 @@ export default class MainPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.fullTitleText = "Harvard Computer Society";
+    this.fullTitleText = ["Harvard", "Computer", "Society"];
     this.titleTypeSpeed = 100;
     this.cursorBlinkSpeed = 500;
     this.numBlinks = 7;
@@ -36,16 +36,17 @@ export default class MainPage extends React.Component {
     ];
 
     this.blocksData = [
-      { text: "About us", color: "#AC3B61", html: this.getAbout, backgroundUrl: "/boardphoto.jpg" },
-      { text: "Get Involved", color: "#A47A69", html: this.getInvolved },
+      { text: "About us", color: "#AC3B61", html: this.getAbout, backgroundUrl: "/burg.jpg" },
+      { text: "Get Involved", color: "#A47A69", html: this.getInvolved, backgroundUrl: "/community.png" },
       { text: "Account", color: "#123c69", html: this.getAccount, backgroundUrl: "/hcs_login.png" },
-      { text: "Resources", color: "#069593", html: this.getResources }
+      { text: "Resources", color: "#5171A5", html: this.getResources }
     ];
 
     this.minTitleHeight = 550;
 
     this.state = {
-      showCursor: false,
+      showCursor: true,
+      titleWordIdx: 0,
       nextTitleIdx: 0,
       calendarOpacity: 0,
       bigImageOpacity: 0,
@@ -80,7 +81,6 @@ export default class MainPage extends React.Component {
 
   getAccount() {
     let links = [
-      { title: "Register", href: "/" },
       { title: "Login", href: "/" },
       { title: "Mailing Lists", href: "/" }
     ];
@@ -119,12 +119,9 @@ export default class MainPage extends React.Component {
     ];
     return (
       <div>
-        <div className={styles.involvedText}>
+        <h3 className={styles.involvedText}>
           Comp HCS!
-        </div>
-        <div className={styles.involvedTextSmall}>
-          Our comp runs every semester.
-        </div>
+        </h3>
         <div className={styles.accountList}>
           {links.map(item => (
             <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
@@ -143,13 +140,15 @@ export default class MainPage extends React.Component {
       });
     });
     setTimeout(() => {
-      this.setState({
-        showCursor: true
-      });
       this.titleInterval = setInterval(() => {
-        if(this.state.nextTitleIdx < this.fullTitleText.length) {
+        if(this.state.nextTitleIdx < this.fullTitleText[this.state.titleWordIdx].length) {
           this.setState({
             nextTitleIdx: this.state.nextTitleIdx + 1
+          });
+        } else if(this.state.titleWordIdx < this.fullTitleText.length - 1) {
+          this.setState({
+            titleWordIdx: this.state.titleWordIdx + 1,
+            nextTitleIdx: 0
           });
         } else {
           this.setState({
@@ -168,7 +167,7 @@ export default class MainPage extends React.Component {
           }, this.cursorBlinkSpeed);
         }
       }, this.titleTypeSpeed);
-    }, 500);
+    }, 100);
     this.calculateMaxNewsOffset();
   }
 
@@ -205,7 +204,7 @@ export default class MainPage extends React.Component {
     return (
       <div className={styles.block}>
         <div className={styles.blockBody} style={style}>
-          <p className={styles.blockBodyP}>{data.text}</p>
+          <h4 className={styles.blockBodyP} style={data.textColor ? { color: data.textColor } : {}}>{data.text}</h4>
           <div className={styles.blockHtml}>
             {data.html ? data.html() : null}
           </div>
@@ -239,6 +238,13 @@ export default class MainPage extends React.Component {
     });
   }
 
+  renderPreviousTitleWord(w) {
+    return [
+      w,
+      <br />
+    ]
+  }
+
   render() {
     let calendarStyle = {
       opacity: this.state.calendarOpacity
@@ -252,41 +258,40 @@ export default class MainPage extends React.Component {
           <div className={styles.bigimage} style={{ opacity: this.state.bigimageOpacity }}>
           </div>
           <div className={styles.heading}>
-            <div className={styles.headingText}>
-              {this.fullTitleText.substr(0, this.state.nextTitleIdx)}
+            <h1 className={styles.headingText}>
+              {this.fullTitleText.slice(0, this.state.titleWordIdx).map(this.renderPreviousTitleWord)}
+              {this.fullTitleText[this.state.titleWordIdx].substr(0, this.state.nextTitleIdx)}
               <span style={{ display: this.state.showCursor ? "inline" : "none" }} className={styles.cursor}>&#9647;</span>
-              <span style={{ opacity: 0 }}>{this.fullTitleText.substr(this.state.nextTitleIdx)}</span>
-            </div>
+            </h1>
           </div>
           <div className={styles.calendarWrap} style={calendarStyle}>
             <Calendar />
           </div>
         </div>
-        <div className={styles.content}>
+        <div className={styles.contentWrap}>
           <div className={styles.topStuff}>
-            <h1 className={styles.largest}>Harvard's Largest CS Organization on Campus.<br /> Est. 1983.</h1>
-            <div className={styles.logoWrap}>
-              <img className={styles.logo} width="200" height="auto" src="/logo.min.svg"></img>
+            <h1 className={styles.largest}>Harvard's Largest CS Organization on Campus</h1>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.blocks}>
+              {this.blocksData.map(this.renderBlock)}
             </div>
-          </div>
-          <div className={styles.blocks}>
-            {this.blocksData.map(this.renderBlock)}
-          </div>
-          <div className={styles.newsHeader}>
-            <h1>News</h1>
-          </div>
-          <div className={styles.news}>
-            <div className={styles.newsBackBar} style={{ opacity: this.state.newsOffset < 0 ? 1 : 0, visibility: this.state.newsOffset < 0 ? "visible" : "hidden"}}>
-              <div className={styles.newsMoreBarButton} onClick={this.backNews}>
-                &larr;
+            <div className={styles.newsHeader}>
+              <h1>News</h1>
+            </div>
+            <div className={styles.news}>
+              <div className={styles.newsBackBar} style={{ opacity: this.state.newsOffset < 0 ? 1 : 0, visibility: this.state.newsOffset < 0 ? "visible" : "hidden"}} onClick={this.backNews}>
+                <div className={styles.newsMoreBarButton}>
+                  <img width={30} height={30} src="/chevron-back-outline.svg"></img>
+                </div>
               </div>
-            </div>
-            <div className={styles.newsMove} style={{ left: this.state.newsOffset + "px" }}>
-              {this.newsData.map(this.renderNewsCard)}
-            </div>
-            <div className={styles.newsMoreBar} style={{ opacity: this.state.newsOffset > -this.maxNewsOffset ? 1 : 0, visibility: this.state.newsOffset > -this.maxNewsOffset ? "visible" : "hidden"}}>
-              <div className={styles.newsMoreBarButton} onClick={this.moreNews}>
-                &rarr;
+              <div className={styles.newsMove} style={{ left: this.state.newsOffset + "px" }}>
+                {this.newsData.map(this.renderNewsCard)}
+              </div>
+              <div className={styles.newsMoreBar} style={{ opacity: this.state.newsOffset > -this.maxNewsOffset ? 1 : 0, visibility: this.state.newsOffset > -this.maxNewsOffset ? "visible" : "hidden"}} onClick={this.moreNews}>
+                <div className={styles.newsMoreBarButton}>
+                  <img width={30} height={30} src="/chevron-forward-outline.svg"></img>
+                </div>
               </div>
             </div>
           </div>

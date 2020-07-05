@@ -86,9 +86,12 @@ export default class PeoplePage extends React.Component {
     render () {
       return(
         <Layout>
-          <div>
-          <h1 className = {styles.hcs}>HCS Board '20</h1>
-          <img src="/boardphoto.jpg" alt="Board photo" className = {styles.boardimage}></img>
+          <div className={styles.wrap}>
+          <div style={{ position: "relative" }}>
+            <img src="/boardphoto.jpg" className = {styles.boardimage}>
+            </img>
+            <h1 className = {styles.hcs}>HCS Board '20</h1>
+          </div>
           <a href = "mailto: hcs-board@hcs.harvard.edu">
           <img src="/gmail.jpg" width="40" height="40" className = {styles.emailimage}></img>
           </a>

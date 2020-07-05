@@ -10,7 +10,7 @@
 
 .image {
   height: auto;
-  margin: 15px 30px;
+  width: 100%;
 }
 
 .sponsorName {
@@ -36,7 +36,8 @@
 }
 
 .gold .image {
-  width: 600px;
+  width: 70vw;
+  max-width: 600px;
 }
 
 .silver {
@@ -44,7 +45,8 @@
 }
 
 .silver .image {
-  width: 400px;
+  width: 50vw;
+  max-width: 400px;
 }
 
 .bronze {
@@ -53,7 +55,8 @@
 }
 
 .bronze .image {
-  width: 300px;
+  width: 30vw;
+  max-width: 300px;
 }
 
 .groupTitle {

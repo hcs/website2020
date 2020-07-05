@@ -24,11 +24,14 @@ export default class Subscribe extends React.Component {
   render() {
     return (
       <div className={styles.wrap}>
-        <h1 className={styles.title}>Subscribe</h1>
-        {this.lists.map(this.renderList)}
-        <br />
-        <input placeholder={"Your email"}className={styles.inputText} type={"text"} />
-        <button className={styles.submit}>Submit</button>
+        <div className={styles.content}>
+          <h1 className={styles.title}>Subscribe</h1>
+          {this.lists.map(this.renderList)}
+          <br />
+          <br />
+          <input placeholder={"Your email"}className={styles.inputText} type={"text"} />
+          <button className={styles.submit}>Submit</button>
+        </div>
       </div>
     );
   }
