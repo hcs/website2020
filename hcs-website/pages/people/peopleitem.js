@@ -18,9 +18,6 @@ export default class PeopleItem extends React.Component {
                             <a className = {styles.name}>{this.props.name}</a>
                             <a className = {styles.bio}>{this.props.bio}</a>
                     </div>
-                    <img src="/github.png" className = {styles.icon}></img>
-                    <img src="/linkedin.png" className = {styles.icon}></img>
-                    <img src="/gmail.png" className = {styles.icon}></img>
                  </div>
       )
     }

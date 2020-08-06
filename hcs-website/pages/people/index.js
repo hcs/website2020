@@ -87,13 +87,14 @@ export default class PeoplePage extends React.Component {
       return(
         <Layout>
           <div className={styles.wrap}>
-          <div style={{ position: "relative" }}>
+          <div className={styles.imageWrap}>
             <img src="/boardphoto.jpg" className = {styles.boardimage}>
             </img>
             <h1 className = {styles.hcs}>HCS Board '20</h1>
           </div>
+          <div className={styles.contentWrap}>
           <a href = "mailto: hcs-board@hcs.harvard.edu">
-          <img src="/gmail.jpg" width="40" height="40" className = {styles.emailimage}></img>
+            <img src="/gmail.jpg" width="40" height="40" className = {styles.emailimage}></img>
           </a>
           <p className = {styles.emailhcsboard}>Email HCS board</p>
 
@@ -133,6 +134,7 @@ export default class PeoplePage extends React.Component {
                 </div>
                 {this.anna.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio}/>)}
               </div>
+          </div>
           </div>
         </Layout>
       );

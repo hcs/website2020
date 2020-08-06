@@ -17,7 +17,7 @@ export default class Layout extends React.Component {
           ]
         },
         { href: "/comp", title: "Get Involved", right:true, subitems: [
-          { href: "/comp", title: "Comp"},
+          { href: "/comp", title: "Comp HCS"},
           { href: "/bip", title: "BIP"}
           ]
         },

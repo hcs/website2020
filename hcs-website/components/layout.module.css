@@ -35,16 +35,21 @@
 
 .navListLi {
   display: inline-block;
-  margin: 0px 20px;
+  margin: 0px 10px;
   position: relative;
+  width: 130px;
 }
 
 .navListA, .navSubListA {
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: center;
   color: white;
   padding: 20px;
+}
+
+.navSubListA {
+  opacity: 0.8;
 }
 
 .navListA:hover, .navSubListA:hover {
@@ -58,6 +63,7 @@
 
 .navSubListA:hover {
   background-color: #851526;
+  opacity: 1;
 }
 
 .footer {
