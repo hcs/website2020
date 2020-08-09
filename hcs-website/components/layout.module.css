@@ -67,11 +67,26 @@
 }
 
 .footer {
-  background-color: #cfcfcf;
-  padding: 20px;
-  text-align: center;
+  background-color: rgb(46, 45, 45);
+  padding: 100px;
+  color: white;
 }
 
+.left {
+  float: left;
+  margin-left: 150px
+}
+
+.right {
+  float: right;
+  margin-right: 150px
+}
+
+.contact {
+  background-color: rgb(46, 45, 45);
+  text-align: center;
+  color: white
+}
 .navListCollapse {
   display: none;
   float: right;

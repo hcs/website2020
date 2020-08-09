@@ -33,7 +33,7 @@ export default class About extends React.Component {
           <div className="intro">
             <h2 className={styles.subtitle}>What We Do</h2>
             <p className={styles.container}>The Harvard Computer Society is a student-run organization at Harvard College that has been a driving force in the development and deployment of computers at Harvard since well before the fall of the Soviet Union (or at the very least, we've met weekly to talk about computers and technology and eat pizza since at least 1983). We do whatever we're interested in (and, by proxy, whatever you're interested in, if you join us) but we have a number of ongoing and currently active projects that tend to consume our time. They're listed below: if any of them strike your fancy, come visit us! Want to start your own project? Pitch it to us and if we like what we hear, we would be happy to fund you! To apply click {' '}
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScAbm5yZn-aBaHtRvAnov-Z5fYGNNTfr5slvuO0mUw31-fhig/viewform"><a>here</a></Link>.
+              <Link href="docs.google.com/forms/d/e/1FAIpQLScAbm5yZn-aBaHtRvAnov-Z5fYGNNTfr5slvuO0mUw31-fhig/viewform"><a>here</a></Link>.
             </p>
           </div>
 

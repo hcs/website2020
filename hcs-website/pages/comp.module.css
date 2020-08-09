@@ -14,7 +14,7 @@
   padding: 0;
   font-family: 'Hind', sans-serif;
   background: #fff;
-  color: #4d5974;
+  color: #313744;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,12 +40,10 @@
 
 }
 
-
 .comp {
   margin: auto;
   text-align: center;
   font-size: 40px;
-  font-family: Hoefler Text;
   padding: 10px;
   font-weight: normal;
   color: black;
@@ -55,11 +53,14 @@
   margin: 0 auto;
   padding: 0.5rem;
   padding-left: 4rem;
+  max-width: 2000px;
+
 }
 
 .subtitle {
   margin: 0 auto;
   padding: 1.5rem;
+  max-width: 2000px;
 }
 
 
@@ -67,6 +68,9 @@
 .container {
   margin: 0 auto;
   padding: 0.5rem 1.5rem;
+  width: 100%;
+  max-width: 2000px;
+
 }
 /*
 
@@ -90,7 +94,7 @@ h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 1rem 3rem 1rem 1rem;
-  color: #7288a2;
+  color: #313744;
   font-size: 1.15rem;
   font-weight: 400;
   border-bottom: 1px solid #e5e5e5;
@@ -118,14 +122,14 @@ h3 {
   float: right;
   right: 1rem;
   font-size: 1rem;
-  color: #7288a2;
+  color: #313744;
   padding: 5px;
   width: 1rem;
   height: 1rem;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #7288a2;
+  border: 1px solid #313744;
   text-align: center;
 }
 
@@ -146,11 +150,13 @@ h3 {
   -webkit-transition: all 0.2s ease 0.15s;
   -o-transition: all 0.2s ease 0.15s;
   transition: all 0.2s ease 0.15s;
+  
 }
 
 .accordion .content p {
   font-size: 1rem;
   font-weight: 300;
+
 }
 
 .accordion .content.active {
@@ -160,4 +166,5 @@ h3 {
   -webkit-transition: all 0.35s ease 0.15s;
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
+
 }
