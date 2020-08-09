@@ -10,20 +10,24 @@ export default class Layout extends React.Component {
       collapsed: true,
       links: [
         { href: "/", title: "Home" },
-        { href: "/about", title: "About", right: true, subitems: [
-          { href: "/about", title: "About us" },
-          { href: "/faq", title: "FAQ" },
-          { href: "/sponsors", title: "Sponsors" }
+        {
+          href: "/about", title: "About", right: true, subitems: [
+            { href: "/about", title: "About us" },
+            { href: "/faq", title: "FAQ" },
+            { href: "/sponsors", title: "Sponsors" }
           ]
         },
-        { href: "/comp", title: "Get Involved", right:true, subitems: [
-          { href: "/comp", title: "Comp HCS"},
-          { href: "/bip", title: "BIP"}
+        {
+          href: "/comp", title: "Get Involved", right: true, subitems: [
+            { href: "/comp", title: "Comp HCS" },
+            { href: "/bip", title: "BIP" }
           ]
         },
-        { href: "/people", title: "Contact", right:true, subitems: [
-          {href: "/people", title: "HCS Board"}
-        ]}
+        {
+          href: "/people", title: "Contact", right: true, subitems: [
+            { href: "/people", title: "HCS Board" }
+          ]
+        }
       ]
     };
     this.toggleCollapse = this.toggleCollapse.bind(this);
@@ -32,7 +36,7 @@ export default class Layout extends React.Component {
   renderNavSubitems = (link, index) => {
     console.log(link);
     return [
-      <div key={"expand"} className={styles.expandItem} onClick={() => {this.toggleItem(index)} }>
+      <div key={"expand"} className={styles.expandItem} onClick={() => { this.toggleItem(index) }}>
         <img width={30} height={30} src={link.expanded ? "/chevron-up-outline.svg" : "/chevron-down-outline.svg"}></img>
       </div>,
       <ul key={"list"} className={styles.navSubList + (link.expanded ? styles.expanded : "")}>
@@ -99,9 +103,10 @@ export default class Layout extends React.Component {
         </div>
         {this.props.children}
         <div className={styles.footer}>
-          &copy; Harvard Computer Society 2020.
+          <div className={styles.left}> &copy; Harvard Computer Society 2020. </div>
+          <div className={styles.right}> Contact Us: hcs-board (at) hcs (.harvard.edu)</div>
         </div>
-      </div>
+      </div >
     );
   }
 
