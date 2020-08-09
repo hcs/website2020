@@ -3,6 +3,17 @@ import Calendar from '../components/calendar.js';
 import Subscribe from '../components/subscribe.js';
 import Link from 'next/link';
 import styles from './index.module.css';
+import getPostData from '../lib/posts.js';
+import getEvents from '../lib/calendar.js';
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      posts: await getPostData(),
+      events: await getEvents()
+    }
+  }
+}
 
 export default class MainPage extends React.Component {
   constructor(props) {
@@ -12,28 +23,6 @@ export default class MainPage extends React.Component {
     this.titleTypeSpeed = 100;
     this.cursorBlinkSpeed = 500;
     this.numBlinks = 7;
-
-    this.newsData = [
-      { title: "Updates to the Comp",
-      body: "Due to situation posed by Covid-19, HCS comp this semester will look a little different than planned. Only 2 bootcamps out of 4 will be required to become a HCS member. See more information at the Comp page.",
-      href: "/comp",
-      action: "Comp" },
-
-      { title: "Hosting on Harvard's Zoom",
-      body: "You can access Harvard's Enterprise Zoom features by connecting through your HarvardKey. This allows you to host meetings with unlimited time and member allowance. We've realized a lot of people have been using free Zoom accounts, which have some annoying limits.",
-      href: "https://harvard.zoom.us/",
-      action: "Host" },
-
-      { title: "Join HCS Slack",
-      body: "Please join HCS Slack to receive important updates about HCS' community events, mentorship programs, bootcamp information, and CS internships/recruitment information.",
-      href: "https://join.slack.com/t/hcs-community/shared_invite/zt-e22nxuja-GIpRC7asDmNw8IfLWqlFjg",
-      action: "Join" },
-
-      { title: "HCS community survey",
-      body: "If you are a member, please take some time to fill out the following survey on the HCS Community. This survey should only take a few minutes to complete.",
-      href: "https://forms.gle/kAorrhv5fEL7whEe7",
-      action: "Join"},
-    ];
 
     this.blocksData = [
       { text: "About us", color: "#AC3B61", html: this.getAbout, backgroundUrl: "/burg.jpg" },
@@ -58,11 +47,12 @@ export default class MainPage extends React.Component {
     this.resize = this.resize.bind(this);
     this.scroll = this.scroll.bind(this);
     this.newsItemWidth = 349;
+    console.log(props.events);
   }
 
   getAbout() {
     let links = [
-      { title: "Our Mission", href: "/" },
+      { title: "About Us", href: "/about" },
       { title: "Board", href: "/people" },
     ];
     return (
@@ -81,8 +71,8 @@ export default class MainPage extends React.Component {
 
   getAccount() {
     let links = [
-      { title: "Login", href: "/" },
-      { title: "Mailing Lists", href: "/" }
+      { title: "Login", href: "https://accounts.hcs.harvard.edu" },
+      { title: "Mailing Lists", href: "https://lists.hcs.harvard.edu" }
     ];
     return (
       <div className={styles.accountList}>
@@ -98,8 +88,7 @@ export default class MainPage extends React.Component {
 
   getResources() {
     let links = [
-      { title: "Tutorials", href: "/" },
-      { title: "FAQ", href: "/" },
+      { title: "FAQ", href: "/faq" },
     ];
     return (
       <div className={styles.accountList}>
@@ -190,7 +179,9 @@ export default class MainPage extends React.Component {
         <div className={styles.newsCardTitle}>
           <h2 className={styles.newsTitle}>{data.title}</h2>
           <p className={styles.newsBody}>{data.body}</p>
-          <Link href={data.href}><a className={styles.newsMore}>{data.action}</a></Link>
+          { data.button &&
+            <Link href={data.button.link}><a className={styles.newsMore}>{data.button.title}</a></Link>
+          }
         </div>
       </div>
     );
@@ -214,10 +205,10 @@ export default class MainPage extends React.Component {
   }
 
   calculateMaxNewsOffset() {
-    if(this.newsData.length) {
-      this.maxNewsOffset = this.newsData.length * this.newsItemWidth - this.newsItemWidth * Math.floor((Math.min(window.innerWidth - 40, 1580)) / this.newsItemWidth);
+    if(this.props.posts.length) {
+      this.maxNewsOffset = this.props.posts.length * this.newsItemWidth - this.newsItemWidth * Math.floor((Math.min(window.innerWidth - 40, 1580)) / this.newsItemWidth);
       this.setState({
-        newsOffset: Math.max(this.state.newsOffset, -this.maxNewsOffset)
+        newsOffset: Math.min(0, Math.max(this.state.newsOffset, -this.maxNewsOffset))
       });
     } else {
       this.maxNewsOffset = 0;
@@ -265,7 +256,7 @@ export default class MainPage extends React.Component {
             </h1>
           </div>
           <div className={styles.calendarWrap} style={calendarStyle}>
-            <Calendar />
+            <Calendar events={this.props.events} />
           </div>
         </div>
         <div className={styles.contentWrap}>
@@ -286,7 +277,7 @@ export default class MainPage extends React.Component {
                 </div>
               </div>
               <div className={styles.newsMove} style={{ left: this.state.newsOffset + "px" }}>
-                {this.newsData.map(this.renderNewsCard)}
+                {this.props.posts.map(this.renderNewsCard)}
               </div>
               <div className={styles.newsMoreBar} style={{ opacity: this.state.newsOffset > -this.maxNewsOffset ? 1 : 0, visibility: this.state.newsOffset > -this.maxNewsOffset ? "visible" : "hidden"}} onClick={this.moreNews}>
                 <div className={styles.newsMoreBarButton}>

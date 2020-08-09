@@ -2,6 +2,13 @@
   display: inline-block;
 }
 
+.calendarLinkWrap {
+  padding: 10px 20px;
+  margin: 10px;
+  width: 300px;
+  background-color: #eee;
+}
+
 .calendarTitle {
   border: 3px solid #A51C30;
   background-color: #eee;

@@ -10,14 +10,20 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bootstrap": "^4.5.0",
+    "fs": "0.0.1-security",
+    "googleapis": "^39.2.0",
+    "gray-matter": "^4.0.2",
     "next": "^9.3.6",
     "node-sass": "^4.14.1",
+    "path": "^0.12.7",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^16.13.1",
     "react-ionicons": "^3.1.4",
     "react-scroll": "^1.7.16",
-    "react-transition-group": "^4.3.0"
+    "react-transition-group": "^4.3.0",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0"
   }
 }
