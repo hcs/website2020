@@ -36,7 +36,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%
+  width: 100vw;
+  height: 100vh;
 }
 
 /* email icon */
@@ -45,7 +46,6 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0.7em;
-
 }
 
 .icon {
@@ -117,7 +117,6 @@
   margin: auto;
   width: 250px;
   height: 250px;
-  /* margin: .5em; */
 }
 
 .pics img {

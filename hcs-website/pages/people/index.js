@@ -12,7 +12,7 @@ export default class PeoplePage extends React.Component {
 
     this.manasi = [
       {
-        name: "Manasi Maheshawari",
+        name: "Manasi Maheshwari",
         pic: "headshots/Manasi.jpg",
         bio: "Manasi is a junior concentrating in CS. She hails from California and she lives in Currier House. She was involved in HSA DEV and Harvard Tech Review, and also starred in Gunghroo, the largest college student production in the world."
       }
@@ -114,7 +114,9 @@ export default class PeoplePage extends React.Component {
           <div className={styles.imageWrap}>
             <img src="/boardphoto.jpg" className={styles.boardimage}>
             </img>
-            <h1 className={styles.hcs}>HCS Board '20</h1>
+            //
+            // <h1 className={styles.hcs}>HCS Board '20</h1>
+            // 
           </div>
           <div className={styles.contentWrap}>
             <a href="mailto: hcs-board@hcs.harvard.edu">

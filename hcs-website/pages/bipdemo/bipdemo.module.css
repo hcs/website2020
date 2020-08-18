@@ -1,0 +1,52 @@
+.boxes {
+  text-align: center;
+  background: #e3e3e3;
+  padding: 60px 0;
+}
+
+.box {
+  background: white;
+  text-align: center;
+  display: inline-block;
+  margin: 25px;
+  vertical-align: top;
+  height: 450px;
+  width: 450px;
+}
+
+.boxes :hover {
+  background: #ffeded;
+}
+
+.description {
+    text-align: center;
+    color: black;
+    font-size: 11px;
+    display: block;
+    padding: .4em 0;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.title {
+  color: #244985;
+  font-size: 25px;
+  font-weight: 350;
+  line-height: 2.5;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.pics img {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.pics:hover {
+  filter: sepia(30%);
+  transition: filter 0.5s;
+  z-index: 1;
+}
