@@ -37,7 +37,6 @@
   display: inline-block;
   margin: 0px 10px;
   position: relative;
-  width: 130px;
 }
 
 .navListA, .navSubListA {
@@ -68,18 +67,19 @@
 
 .footer {
   background-color: rgb(46, 45, 45);
-  padding: 100px;
+  padding: 40px;
   color: white;
 }
 
 .left {
-  float: left;
-  margin-left: 150px
+  display: inline-block;
+  width: 50%;
 }
 
 .right {
-  float: right;
-  margin-right: 150px
+  display: inline-block;
+  width: 50%;
+  text-align: right;
 }
 
 .contact {
@@ -101,7 +101,7 @@
   display: none;
   position: absolute;
   top: 0px;
-  height: 29px;
+  height: 31px;
   padding: 15px 10px;
   right: 0px;
 }

@@ -25,6 +25,7 @@
     "react-scroll": "^1.7.16",
     "react-transition-group": "^4.3.0",
     "remark": "^12.0.1",
-    "remark-html": "^12.0.0"
+    "remark-html": "^12.0.0",
+    "video-react": "^0.14.1"
   }
 }

@@ -13,12 +13,20 @@
   border: 3px solid #A51C30;
   background-color: #eee;
   font-size: 30px;
-  color: #A51C30;
   padding: 10px 20px;
   width: 300px;
   text-align: center;
   margin: 10px;
   position: relative;
+}
+
+.calendarTitle a {
+  color: #A51C30;
+  text-decoration: none;
+}
+
+.calendarTitle a:hover {
+  text-decoration: underline;
 }
 
 .calendarList {

@@ -36,9 +36,9 @@ export default class FAQPage extends React.Component {
           <div className={styles.wrap}>
               <h1 className = {styles.faq}>Frequently Asked Questions</h1>
               <h2 className = {styles.subtitle}>General</h2>
-              {this.general.map(item => <FAQItem title={item.title} body={item.body} />)};
+              {this.general.map(item => <FAQItem title={item.title} body={item.body} />)}
               <h2 className = {styles.subtitle}>Get Involved</h2>
-              {this.involved.map(item => <FAQItem title={item.title} body={item.body} />)};
+              {this.involved.map(item => <FAQItem title={item.title} body={item.body} />)}
           </div>
         </Layout>
       );

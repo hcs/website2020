@@ -6,7 +6,7 @@ import styles from './index.module.css';
 import getPostData from '../lib/posts.js';
 import getEvents from '../lib/calendar.js';
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   return {
     props: {
       posts: await getPostData(),

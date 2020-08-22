@@ -7,14 +7,18 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 export default async function getSortedPostsData(max = 10) {
-  const ids = getAllPostIds();
-  let data = [];
+  try {
+    const ids = getAllPostIds();
+    let data = [];
 
-  for(let i = 0; i < max && i < ids.length; i++) {
-    data.push(await getPostData(ids[i]));
+    for(let i = 0; i < max && i < ids.length; i++) {
+      data.push(await getPostData(ids[i]));
+    }
+
+    return data;
+  } catch {
+    return [];
   }
-
-  return data;
 }
 
 function getAllPostIds() {

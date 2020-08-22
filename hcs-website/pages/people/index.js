@@ -112,18 +112,10 @@ export default class PeoplePage extends React.Component {
       <Layout>
         <div className={styles.wrap}>
           <div className={styles.imageWrap}>
-            <img src="/boardphoto.jpg" className={styles.boardimage}>
-            </img>
-            //
-            // <h1 className={styles.hcs}>HCS Board '20</h1>
-            //
+            <span className={styles.title}>HCS Board</span>
           </div>
           <div className={styles.contentWrap}>
-            <a href="mailto: hcs-board@hcs.harvard.edu">
-              <img src="/gmail.jpg" width="40" height="40" className={styles.emailimage}></img>
-            </a>
-            <p className={styles.emailhcsboard}>Email HCS board</p>
-
+            <div className={styles.contact}><strong>Contact Us: hcs-board (at) hcs (.harvard.edu)</strong></div>
             <div className={styles.boxes}>
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>President | <strong>Co-Presidents</strong></h2>
