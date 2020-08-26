@@ -34,6 +34,20 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.pitch}>The FrigiStick is a patent pending sports medicine device that provides a convenient way for people to treat athletic injuries. In a single ergonomic and portable device, we combine cold icing relief with the ability to massage your injuries, providing an efficient method of recovery.</a>
             </div>
         </div>
+        
+        <div className = {styles.box}>
+            <div className = {styles.pics}>
+            <Iframe
+            height="300" //790-40 from nav bar
+            src="https://www.youtube.com/embed/sUmALfhKj34"/>
+            </div>
+            <div>
+                    <a className = {styles.title}>Toppings</a>
+                    <a className = {styles.category}>Community</a>
+                    <a className = {styles.pitch}>Toppings is a community-based on-the-way delivery app that combines existing social networks to offer free, accessible food/grocery delivery. Using friends, neighbors, and co-workers, Toppings allows for users to request from others who are already out shopping/eating and request items to be delivered back to them. While originally designed to provide an alternative to existing delivery apps on college campuses, due to the current crisis, the app will help coordinate COVID volunteers and communities with a built-in social networking, notification, and geo-tracking system. </a>
+            </div>
+        </div>
+        
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
@@ -69,17 +83,6 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.title}>Critterland</a>
                     <a className = {styles.category}>Gaming</a>
                     <a className = {styles.pitch}>Critterland is a strategy video game that draws inspiration from the natural world to create a novel and intuitive simulation of small-scale ecosystem dynamics. Players must introduce critters with different adaptations into the environment to achieve diverse goals - winning campaign levels, competing with other players, or discovering new interesting equilibriums.</a>
-            </div>
-        </div>
-
-        <div className = {styles.box}>
-            <div className = {styles.pics}>
-            <img width={550} height={300} src="/gluten.png"></img>
-            </div>
-            <div>
-                    <a className = {styles.title}>Gluten Free Drugs</a>
-                    <a className = {styles.category}>Social Good</a>
-                    <a className = {styles.pitch}>Hundreds of thousands of Americans suffer from Celiac Disease or other gluten-triggered sensitivities. However, current legislation leaves patients and doctors unable to easily determine which medications are safe for consumption. Our app will seek to increase the accessibility of this crucial information, as well as encourage organic communication between medical practitioners and patients.</a>
             </div>
         </div>
 
@@ -144,7 +147,9 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <img width={550} height={300} src="/relationship.jpg"></img>
+            <Iframe
+            height="300" //790-40 from nav bar
+            src="https://www.youtube.com/embed/1tg6ddl-OYY"/>
             </div>
             <div>
                     <a className = {styles.title}>Kumo</a>
@@ -175,18 +180,6 @@ export default class HCSVideo extends React.Component {
             </div>
         </div>
 
-        <div className = {styles.box}>
-            <div className = {styles.pics}>
-            <Iframe
-            height="300" //790-40 from nav bar
-            src="https://www.youtube.com/embed/sUmALfhKj34"/>
-            </div>
-            <div>
-                    <a className = {styles.title}>Toppings</a>
-                    <a className = {styles.category}>Community</a>
-                    <a className = {styles.pitch}>Toppings is a community-based on-the-way delivery app that combines existing social networks to offer free, accessible food/grocery delivery. Using friends, neighbors, and co-workers, Toppings allows for users to request from others who are already out shopping/eating and request items to be delivered back to them. While originally designed to provide an alternative to existing delivery apps on college campuses, due to the current crisis, the app will help coordinate COVID volunteers and communities with a built-in social networking, notification, and geo-tracking system. </a>
-            </div>
-        </div>
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
@@ -222,6 +215,17 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.pitch}>Help us give birth to the unholy illegitimate child of Legos and ROKR/Ugears.</a>
             </div>
         </div>
+        <div className = {styles.box}>
+            <div className = {styles.pics}>
+            <img width={550} height={300} src="/gluten.png"></img>
+            </div>
+            <div>
+                    <a className = {styles.title}>Gluten Free Drugs</a>
+                    <a className = {styles.category}>Social Good</a>
+                    <a className = {styles.pitch}>Hundreds of thousands of Americans suffer from Celiac Disease or other gluten-triggered sensitivities. However, current legislation leaves patients and doctors unable to easily determine which medications are safe for consumption. Our app will seek to increase the accessibility of this crucial information, as well as encourage organic communication between medical practitioners and patients.</a>
+            </div>
+        </div>
+
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
