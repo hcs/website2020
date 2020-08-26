@@ -1,3 +1,13 @@
+.h {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+
+}
+
 .boxes {
   text-align: center;
   background: #e3e3e3;
@@ -10,43 +20,36 @@
   display: inline-block;
   margin: 25px;
   vertical-align: top;
-  height: 450px;
-  width: 450px;
-}
-
-.boxes :hover {
-  background: #ffeded;
-}
-
-.description {
-    text-align: center;
-    color: black;
-    font-size: 11px;
-    display: block;
-    padding: .4em 0;
-    font-weight: 300;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 590px;
+  width: 550px;
+  border: 1px black solid;
 }
 
 .title {
   color: #244985;
   font-size: 25px;
   font-weight: 350;
-  line-height: 2.5;
+  line-height: 2.4;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.pics img {
-  margin-top: 20px;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
+.category {
+    font-style:italic;
+    text-align: center;
+    color: #a81c34;
+    font-size: 15px;
+    display: block;
+    font-weight: 350;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.pics:hover {
-  filter: sepia(30%);
-  transition: filter 0.5s;
-  z-index: 1;
+.pitch {
+    line-height: 2.0;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    display: block;
+    padding: 20px 20px;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
