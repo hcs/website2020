@@ -1,10 +1,10 @@
 .h {
   padding-top: 70px;
   padding-bottom: 60px;
-  font-size: 40px;
+  font-size: 55px;
   margin: auto;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
 
 }
 
@@ -22,7 +22,6 @@
   vertical-align: top;
   height: 590px;
   width: 550px;
-  border: 1px black solid;
 }
 
 .title {

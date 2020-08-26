@@ -74,3 +74,8 @@ a {
   color: #336;
 }
 
+iframe {
+  border: none;
+  width: 100%;
+}
+

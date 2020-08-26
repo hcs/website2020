@@ -20,11 +20,11 @@ export default class HCSVideo extends React.Component {
       return(
     <Layout disabled>
     <>
-    <h1 className = {styles.h}>Builder's Incubation Program Demo</h1>
+    <h1 className = {styles.h}>Builders Incubation Program: Virtual Demo Day</h1>
     <div className={styles.boxes}>
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/QUM_WRxv9Dk"/>
             </div>
@@ -48,7 +48,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/-amw16yCj6Q"/>
             </div>
@@ -61,7 +61,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/LQ26qlpQgSo"/>
             </div>
@@ -96,7 +96,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/LoWuvKiiLCQ"/>
             </div>
@@ -120,7 +120,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/F6MP7AGWbGo"/>
             </div>
@@ -177,7 +177,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/sUmALfhKj34"/>
             </div>
@@ -201,7 +201,7 @@ export default class HCSVideo extends React.Component {
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/baldoRU_JA0"/>
             </div>
