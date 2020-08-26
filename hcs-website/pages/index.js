@@ -80,7 +80,7 @@ export default class MainPage extends React.Component {
           Make an account to request our free website hosting services, or sign in to your mailing list portal with your HarvardKey to make an email list.
         </div>
         {links.map(item => (
-          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+          <a href={item.href} className={styles.accountA}>{item.title}</a>
         ))}
       </div>
     );
@@ -237,6 +237,7 @@ export default class MainPage extends React.Component {
   }
 
   render() {
+    return null;
     let calendarStyle = {
       opacity: this.state.calendarOpacity
     };

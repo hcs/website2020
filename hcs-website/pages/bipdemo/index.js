@@ -18,7 +18,7 @@ export default class HCSVideo extends React.Component {
 
     render () {
       return(
-    <Layout>
+    <Layout disabled>
     <>
     <h1 className = {styles.h}>Builders Incubation Program Demo</h1>
     <div className={styles.boxes}>

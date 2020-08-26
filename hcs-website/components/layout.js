@@ -81,13 +81,11 @@ export default class Layout extends React.Component {
     });
   }
 
-  render() {
+  renderNav() {
+    if(this.props.disabled) return this.props.children;
+
     return (
-      <div className={styles.main}>
-        <Head>
-          <title>Harvard Computer Society</title>
-          <link rel="icon" href="/hcslogo.png" />
-        </Head>
+      <React.Fragment>
         <div className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.navImage}>
@@ -106,7 +104,19 @@ export default class Layout extends React.Component {
           <div className={styles.left}> &copy; Harvard Computer Society 2020. </div>
           <div className={styles.right}> Contact Us: hcs-board (at) hcs (.harvard.edu)</div>
         </div>
-      </div >
+      </React.Fragment>
+    );
+  }
+
+  render() {
+    return (
+      <div className={styles.main}>
+        <Head>
+          <title>Harvard Computer Society</title>
+          <link rel="icon" href="/hcslogo.png" />
+        </Head>
+        {this.renderNav()}
+      </div>
     );
   }
 

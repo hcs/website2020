@@ -12,7 +12,7 @@ export default class BipVideo extends React.Component {
 
     render () {
       return(
-        <Layout>
+        <Layout disabled>
           <div>
           <Player
             playsInline
