@@ -2,7 +2,7 @@ const express = require('express');
 const { parse } = require('url');
 const { createServer } = require('https');
 const next = require('next');
-const app = next();
+const app = next({});
 const handle = app.getRequestHandler();
 const port = 443;
 
