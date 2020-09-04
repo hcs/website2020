@@ -7,12 +7,13 @@ const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = 'lib/token.json';
+const TOKEN_PATH = '/hcs/website2020/hcs-website/lib/token.json';
+const CREDS_PATH = '/hcs/website2020/hcs-website/lib/credentials.json';
 
 export default function getEvents() {
   return new Promise((resolve, reject) => {
     // Load client secrets from a local file.
-    fs.readFile('lib/credentials.json', (err, content) => {
+    fs.readFile(CREDS_PATH, (err, content) => {
       if (err) return resolve([]);
       // Authorize a client with credentials, then call the Google Calendar API.
       authorize(JSON.parse(content), (auth) => {

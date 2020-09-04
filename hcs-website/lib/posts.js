@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = '/hcs/website2020/hcs-website/posts';
 
 export default async function getSortedPostsData(max = 10) {
   try {

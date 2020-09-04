@@ -20,7 +20,8 @@ export default class Layout extends React.Component {
         {
           href: "/comp", title: "Get Involved", right: true, subitems: [
             { href: "/comp", title: "Comp HCS" },
-            { href: "/bipdemo", title: "BIP" }
+            { href: "/bipdemo", title: "BIP" },
+            { href: "https://socialgood.hcs.harvard.edu", title: "Social Good" }
           ]
         },
         {
@@ -42,9 +43,11 @@ export default class Layout extends React.Component {
       <ul key={"list"} className={styles.navSubList + (link.expanded ? styles.expanded : "")}>
         {link.subitems.map((item, index) =>
           <li key={"subitem" + index} className={styles.navListSubLi}>
-            <Link href={item.href}>
-              <a className={styles.navSubListA}>{item.title}</a>
-            </Link>
+	    { (item.href.substring(0, 4) === "http") ? <a className={styles.navSubListA} href={item.href}>{item.title}</a> :
+              <Link href={item.href}>
+	        <a className={styles.navSubListA}>{item.title}</a>
+	      </Link>
+            }
           </li>
         )}
       </ul>
