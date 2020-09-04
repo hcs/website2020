@@ -1,8 +1,8 @@
 {
-  "title": "New!",
-  "body": "New Items Here!",
+  "title": "Tech for Social Good",
+  "body": "As a new HCS initiative, Tech for Social Good partners with nonprofits and social impact organizations to amplify their impact. In teams of 5-7, members work over the course of a semester to take their CS knowledge and apply it to creating significant change",
   "button": {
-    "title": "Button",
-    "link": "google.com"
+    "title": "Learn More",
+    "link": "https://socialgood.hcs.harvard.edu"
   }
 }

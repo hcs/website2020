@@ -9,7 +9,7 @@ export default class About extends React.Component {
   constructor(props) {
     super(props);
     this.projects = [
-      { title: "Systems", body: <p>HCS runs the web server <Link href="/"><a>www.hcs.harvard.edu</a></Link>, and the mailing list server <Link href="http://lists.hcs.harvard.edu"><a>lists.hcs.harvard.edu</a></Link>. This means that most student groups on campus use our Linux machines to host their web sites and administer their email lists. Thanks to a recent grant from FAS IT, we've just spent over $30,000 completely rebuilding our systems from the ground up, which means we're now in a position to do lots of cool projects.</p> },
+      { title: "Systems", body: <p>HCS runs the web server <Link href="/"><a>www.hcs.harvard.edu</a></Link>, and the mailing list server <a href="http://lists.hcs.harvard.edu">lists.hcs.harvard.edu</a>. This means that most student groups on campus use our Linux machines to host their web sites and administer their email lists. Thanks to a recent grant from FAS IT, we've just spent over $30,000 completely rebuilding our systems from the ground up, which means we're now in a position to do lots of cool projects.</p> },
       { title: "Education", body: "HCS runs 4 programming bootcamps every semester, designed to teach new members a variety of tools and programming languages. These bootcamps provide an opportunity for students new to CS to learn some practical, hands-on tools that they can go on to use in their own projects or apps. Successful completion of 3 out of 4 of these bootcamps makes you an HCS member!" },
       { title: "Account Services", body: "All those student groups have accounts on our servers, and the Account Services team is the group of people that makes their user experience as pleasant as possible. Like helping people? Want a fun, easy way to put off doing your homework? Account Services might very well be your cup of tea." },
       { title: "Speakers", body: "HCS often brings big-name speakers to campus. In 1993, we had Steve Ballmer for a visit. In the more recent past, we've had Steve Wozniak, Stephen Wolfram, Paul Graham, and Cory Doctorow. Most recently, we had Larry Wall, inventor of Perl. In general, we try to contact well-known people in the computer and technology sectors and bring them on campus to interact with students." },
@@ -39,7 +39,7 @@ export default class About extends React.Component {
 
           <div className="projects">
             <h2 className={styles.subtitle}>Projects</h2>
-            {this.projects.map(item => <Item title={item.title} body={item.body} />)};
+            {this.projects.map(item => <Item title={item.title} body={item.body} />)}
           </div>
 
           <div className="join">

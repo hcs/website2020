@@ -77,10 +77,10 @@ export default class MainPage extends React.Component {
     return (
       <div className={styles.accountList}>
         <div className={styles.resourcesText}>
-          Make an account to request our free website hosting services, or sign in to your mailing list portal with your HarvardKey to make an email list.
+          Log in and manage your web hosting account, or sign in to our mailing list portal with your HarvardKey to manage your mailing list. 
         </div>
         {links.map(item => (
-          <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
+          <a className={styles.accountA} href={item.href}>{item.title}</a>
         ))}
       </div>
     );
@@ -88,12 +88,12 @@ export default class MainPage extends React.Component {
 
   getResources() {
     let links = [
-      { title: "FAQ", href: "/faq" },
+      { title: "Contact", href: "/people" },
     ];
     return (
       <div className={styles.accountList}>
         <div className={styles.resourcesText}>
-          Having trouble with your website or mailing list? Check out our guides!
+          Looking for access to our free web and email hosting? Contact HCS board!
         </div>
         {links.map(item => (
           <Link href={item.href}><a className={styles.accountA}>{item.title}</a></Link>
@@ -180,7 +180,7 @@ export default class MainPage extends React.Component {
           <h2 className={styles.newsTitle}>{data.title}</h2>
           <p className={styles.newsBody}>{data.body}</p>
           { data.button &&
-            <Link href={data.button.link}><a className={styles.newsMore}>{data.button.title}</a></Link>
+            <a className={styles.newsMore} href={data.button.link}>{data.button.title}</a>
           }
         </div>
       </div>

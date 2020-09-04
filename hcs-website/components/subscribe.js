@@ -5,10 +5,10 @@ export default class Subscribe extends React.Component {
     super(props);
 
     this.lists = [
-      "Announcements",
-      "Discussion",
-      "Jobs",
-      "Questions"
+      { title: "Announcements", href: "https://lists.hcs.harvard.edu/mailman/listinfo/hcs-announce" },
+      { title: "Discussion", href: "https://lists.hcs.harvard.edu/mailman/listinfo/hcs-discuss" },
+      { title: "Jobs", href: "https://lists.hcs.harvard.edu/mailman/listinfo/hcs-jobs" },
+      { title: "Questions", href: "https://lists.hcs.harvard.edu/mailman/listinfo/hcs-questions" },
     ];
     this.state = {
       selected: []
@@ -31,11 +31,11 @@ export default class Subscribe extends React.Component {
 
   renderList(list) {
     return (
-      <div className={styles.button + " " + (this.state.selected.indexOf(list) !== -1 ? styles.selected : "") } onClick={() => this.select(list)}>
-        <div className={styles.checkList} />
-        <div className={styles.listText}>{list}</div>
+      <div className={styles.button/* + " " + (this.state.selected.indexOf(list) !== -1 ? styles.selected : "") */} onClick={/*() => this.select(list)*/null}>
+        <a target="_blank" className={styles.listText} href={list.href}>{list.title}</a>
       </div>
     );
+//        <div className={styles.checkList} />
   }
 
   render() {
@@ -44,14 +44,16 @@ export default class Subscribe extends React.Component {
         <div className={styles.content}>
           <h1 className={styles.title}>Subscribe</h1>
           {this.lists.map(this.renderList)}
+        </div>
+      </div>
+    );
+    /*
           <br />
           <br />
           <form>
             <input placeholder={"Your email"} className={styles.inputText} required type="email" />
             <input type="submit" className={styles.submit} value="Submit"></input>
           </form>
-        </div>
-      </div>
-    );
+          */
   }
 }
