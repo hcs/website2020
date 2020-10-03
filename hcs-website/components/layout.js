@@ -95,7 +95,7 @@ export default class Layout extends React.Component {
           <ul className={styles.navList}>
             <li className={styles.navImage}>
               <Link href="/">
-                <a><img width={50} height={50} src="/hcslogo2.png"></img></a>
+                <a><img width={50} height={50} src="/hcslogo.png"></img></a>
               </Link>
             </li>
             <li className={styles.navListCollapse} onClick={this.toggleCollapse}>

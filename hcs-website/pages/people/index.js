@@ -30,7 +30,7 @@ export default class PeoplePage extends React.Component {
       {
         name: "Vassilios Kaxiras",
         pic: "headshots/Vassilios.png",
-        bio: "Vassilios is a rising sophomore concentrating in CS and living in Eliot House. He is working at a startup now."
+        bio: "Vassilios is a rising sophomore concentrating in CS and living in Eliot House, originally from Belmont, MA."
       }
     ];
 
@@ -39,6 +39,14 @@ export default class PeoplePage extends React.Component {
         name: "Teddy Lin",
         pic: "headshots/Teddy.png",
         bio: "Teddy is a first-year student from Taiwan studying Computer Science and Economics. He lived in Wigglesworth last year and he'll live in Eliot for the next three years (hopefully). Besides HCS, he is involved in Harvard College Film Festival (HCFF) and Harvard Student Agencies (HSA). In his free time, he loves watching documentaries about financial scandals (aka Dirty Money), playing ping pong, learning foreign languages, and hanging out with friends. His favorite foods in the square are Jefe's burrito and Santouka ramen."
+      }
+    ];
+    
+    this.eric = [
+      {
+        name: "Eric Li",
+        pic: "headshots/Eric.jpg",
+        bio: "No bio."
       }
     ];
 
@@ -141,6 +149,11 @@ export default class PeoplePage extends React.Component {
               </div>
               {this.william.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               {this.mark.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Social Good | <strong>Directors of Tech For Social Good</strong></h2>
+              </div>
+              {this.eric.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Relations | <strong>Directors of Relations</strong></h2>
