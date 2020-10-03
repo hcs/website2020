@@ -6,7 +6,7 @@ export default class Calendar extends React.Component {
   }
 
   renderEvent(e) {
-    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day = days[(new Date(e.start.dateTime)).getDay()];
 
     return (

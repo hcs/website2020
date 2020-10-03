@@ -2,7 +2,7 @@ const express = require('express');
 const { parse } = require('url');
 const { createServer } = require('http');
 const next = require('next');
-const app = next({ dir: "/hcs/website2020/hcs-website/" });
+const app = next({}); //next({ dir: "/hcs/website2020/hcs-website/" });
 const handle = app.getRequestHandler();
 const port = 4000;
 
