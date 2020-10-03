@@ -4,7 +4,7 @@ const { createServer } = require('https');
 const next = require('next');
 const app = next({ dir: "/hcs/website2020/hcs-website/" });
 const handle = app.getRequestHandler();
-const port = 443;
+const port = 4001;
 
 const https = require('https');
 const fs = require('fs');

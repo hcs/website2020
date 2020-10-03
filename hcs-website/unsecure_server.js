@@ -4,7 +4,7 @@ const { createServer } = require('http');
 const next = require('next');
 const app = next({ dir: "/hcs/website2020/hcs-website/" });
 const handle = app.getRequestHandler();
-const port = 80;
+const port = 4000;
 
 app
   .prepare()
