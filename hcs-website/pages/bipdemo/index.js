@@ -2,6 +2,7 @@ import React from 'react';
 import Iframe from 'react-iframe'
 import styles from './bipdemo.module.css'
 import Layout from '../../components/layout.js';
+import Link from 'next/link'
 
 
 
@@ -21,6 +22,12 @@ export default class HCSVideo extends React.Component {
     <Layout>
     <>
     <h1 className = {styles.h}>Builders Incubation Program Demo</h1>
+    <div className = {styles.funding}>
+    <Link href="https://forms.gle/nRyiHqE2TXYL4QF19">
+          <a>Apply for BIP Funding</a>
+    </Link>
+    </div>
+
     <div className={styles.boxes}>
         <div className = {styles.box}>
             <div className = {styles.pics}>
