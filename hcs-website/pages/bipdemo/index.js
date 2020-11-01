@@ -21,28 +21,20 @@ export default class HCSVideo extends React.Component {
       return(
     <Layout>
     <>
-    <h1 className = {styles.h}>Builders Incubation Program Demo</h1>
-    <div className = {styles.funding}>
-    <a href="https://forms.gle/nRyiHqE2TXYL4QF19">
-          Apply for BIP Funding
-    </a>
+    {/* <h1 className = {styles.h}>Builders Incubation Program</h1> */}
+    {/* <div className = {styles.funding}>
+    <Link href="https://forms.gle/nRyiHqE2TXYL4QF19">
+          <a>Apply for BIP Funding</a>
+    </Link>
+    </div> */}
+
+    <div className = {styles.landing}>
     </div>
 
     <div className={styles.boxes}>
-        <div className = {styles.box}>
-            <div className = {styles.pics}>
-            <Iframe width="546.4"
-            height="300" //790-40 from nav bar
-            src="https://www.youtube.com/embed/QUM_WRxv9Dk"/>
-            </div>
-            <div>
-                    <a className = {styles.title}>FrigiStick</a>
-                    <a className = {styles.category}>Hardware</a>
-                    <a className = {styles.pitch}>The FrigiStick is a patent pending sports medicine device that provides a convenient way for people to treat athletic injuries. In a single ergonomic and portable device, we combine cold icing relief with the ability to massage your injuries, providing an efficient method of recovery.</a>
-            </div>
-        </div>
+        
 
-        <div className = {styles.box}>
+        {/* <div className = {styles.box}>
             <div className = {styles.pics}>
             <img width={550} height={300} src="/unicorner.png"></img>
             </div>
@@ -51,22 +43,63 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.category}>Networking</a>
                     <a className = {styles.pitch}>"One hot startup in your mailbox every other day. 🦄 Unicorner is the newsletter that delivers a 2 minute rundown of an up-and-coming startup to your inbox every other day."</a>
             </div>
+        </div> */}
+
+        <h1 className = {styles.h}>Featured Projects From BIP 2020</h1>
+    
+        <div className = {styles.box}>
+            <div className = {styles.pics}>
+            <iframe width="398" height="300" src="https://www.youtube.com/embed/PECg8NrgCzQ"></iframe>
+            </div>
+            <div>
+                    <a className = {styles.title}>Congregate</a>
+                    {/* <a className = {styles.category}>Virtual Networking</a> */}
+                    <a className = {styles.pitch}>Congregate is an online events platform that brings the spontaneity of in-person networking events and social gatherings online. Users can seamlessly jump between conversations, hear neighboring conversations, and get matched with attendees of similar interests.  </a>
+            </div>
         </div>
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
-            <Iframe width="546.4"
+            <Iframe width="398"
+            height="300" //790-40 from nav bar
+            src="https://www.youtube.com/embed/QUM_WRxv9Dk"/>
+            </div>
+            <div>
+                    <a className = {styles.title}>FrigiStick</a>
+                    {/* <a className = {styles.category}>Hardware</a> */}
+                    <a className = {styles.pitch}>The FrigiStick is a patent pending sports medicine device that provides a convenient way for people to treat athletic injuries. In a single ergonomic and portable device, we combine cold icing relief with the ability to massage your injuries, providing an efficient method of recovery.</a>
+            </div>
+        </div>
+
+        <div className = {styles.box}>
+            <div className = {styles.pics}>
+            <Iframe width="398"
             height="300" //790-40 from nav bar
             src="https://www.youtube.com/embed/-amw16yCj6Q"/>
             </div>
             <div>
                     <a className = {styles.title}>Rem</a>
-                    <a className = {styles.category}>Charity</a>
-                    <a className = {styles.pitch}>Here at Rem, we’re a company that’s obsessed with helping our users make an impact on society’s most pressing issues. Our goal is to serve as an all-encompassing digital ecosystem for charitable giving (initially in the form of a mobile app), allowing users to discover new charities, learn more about causes they already care about, donate and engage with those charities, and then share those causes with their friends on our platform.</a>
+                    {/* <a className = {styles.category}>Charity</a> */}
+                    <a className = {styles.pitch}>We’re a company that’s obsessed with helping our users make an impact on society’s most pressing issues. Our goal is to serve as an all-encompassing digital ecosystem for charitable giving, allowing users to discover new charities, learn more about causes they already care about.</a>
             </div>
         </div>
 
-        <div className = {styles.box}>
+
+        <div className = {styles.longbox}>
+            <div className = {styles.pics}>
+            {/* <img width={650} height={230} src="/hcsmedium.png"></img> */}
+            <a href="https://medium.com/hcs-builders-incubation-program/" target="_blank">
+            <img width={500} height={130} src="/medium3.png"></img>
+            </a>
+            </div>
+        </div>
+
+
+                        
+                          
+        
+
+        {/* <div className = {styles.box}>
             <div className = {styles.pics}>
             <Iframe width="546.4"
             height="300" //790-40 from nav bar
@@ -77,9 +110,9 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.category}>Gaming</a>
                     <a className = {styles.pitch}>Critterland is a strategy video game that draws inspiration from the natural world to create a novel and intuitive simulation of small-scale ecosystem dynamics. Players must introduce critters with different adaptations into the environment to achieve diverse goals - winning campaign levels, competing with other players, or discovering new interesting equilibriums.</a>
             </div>
-        </div>
+        </div> */}
 
-        <div className = {styles.box}>
+        {/* <div className = {styles.box}>
             <div className = {styles.pics}>
             <img width={550} height={300} src="/gluten.png"></img>
             </div>
@@ -114,16 +147,7 @@ export default class HCSVideo extends React.Component {
             </div>
         </div>
 
-        <div className = {styles.box}>
-            <div className = {styles.pics}>
-            <img width={550} height={300} src="/congregate.png"></img>
-            </div>
-            <div>
-                    <a className = {styles.title}>Congregate</a>
-                    <a className = {styles.category}>Virtual Networking</a>
-                    <a className = {styles.pitch}>Congregate is an online events platform that brings the spontaneity of in-person networking events and social gatherings online. Users can seamlessly jump between conversations, hear neighboring conversations, and get matched with attendees of similar interests.  </a>
-            </div>
-        </div>
+
 
         <div className = {styles.box}>
             <div className = {styles.pics}>
@@ -261,11 +285,11 @@ export default class HCSVideo extends React.Component {
                     <a className = {styles.category}>Hardware Engineering</a>
                     <a className = {styles.pitch}>Designing a bi-propellant liquid rocket engine to take Harvard to Space!</a>
             </div>
-        </div>
-
-
-
-
+        </div> */}
+    </div>
+    <div>
+        
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQOT3VzJsoLBsIBAOt8F-51tu1pHSNbIx9sqdZbECDgSRfpw/viewform?embedded=true" width="1440" height="630" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     </>
 </Layout>
