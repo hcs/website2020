@@ -23,9 +23,9 @@ export default class HCSVideo extends React.Component {
     <>
     <h1 className = {styles.h}>Builders Incubation Program Demo</h1>
     <div className = {styles.funding}>
-    <Link href="https://forms.gle/nRyiHqE2TXYL4QF19">
-          <a>Apply for BIP Funding</a>
-    </Link>
+    <a href="https://forms.gle/nRyiHqE2TXYL4QF19">
+          Apply for BIP Funding
+    </a>
     </div>
 
     <div className={styles.boxes}>

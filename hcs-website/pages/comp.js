@@ -29,7 +29,7 @@ export default class Comp extends React.Component {
                         <h2 className={styles.subtitle}>Why comp HCS?</h2>
                         <p className={styles.container}>Through our hands-on bootcamps and exciting socials, compers not only gain experience with a broad range of technical skills, but also get to immerse themselves in the thriving CS community at Harvard.
                         Upon completing the comp, there are many benefits to being an HCS member including:</p>
-                        {this.benefits.map((item) => <li className={styles.bullet}>{item}</li>)}
+                        {this.benefits.map((item) => <li classname={styles.bullet}>{item}</li>)}
                     </div>
 
                     <div className="how-to">

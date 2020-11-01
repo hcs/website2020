@@ -9,6 +9,30 @@
   box-sizing: inherit;
 } */
 
+.bio {
+  padding: 1rem;
+  color: #555;
+}
+
+.imagebox {
+  text-align: center;
+  padding: 1.5rem 0;
+  display: inline-block;
+  box-shadow: black;
+  width: 350px;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.hover {
+  transition: transform 0.3s;
+}
+
+.hover:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
 .wrap {
   margin: 0;
   padding: 0;
@@ -50,12 +74,17 @@
   color: black;
 }
 
+.list {
+  list-style-type: none;
+  padding: 0.5rem 1.5rem;
+  max-width: 2000px;
+}
+
 .bullet {
   margin: 0 auto;
   padding: 0.5rem;
   padding-left: 4rem;
   max-width: 2000px;
-
 }
 
 .subtitle {
