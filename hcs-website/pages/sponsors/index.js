@@ -10,7 +10,8 @@ export default class Sponsors extends React.Component {
         { name: "Jane Street", url: "/jane_street.png" },
       ] },
       { name: "Silver", sponsors: [
-        { name: "Microsoft", url: "/microsoft_0.png" }
+        { name: "Microsoft", url: "/microsoft_0.png" }, 
+        { name: "Huawei", url: "/huawei.png" }
       ] },
       { name: "Bronze", sponsors: [
         { name: "Bloomberg", url: "/Bloomberg.png" },
