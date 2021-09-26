@@ -10,7 +10,7 @@ export default class Sponsors extends React.Component {
         { name: "Jane Street", url: "/jane_street.png" },
       ] },
       { name: "Silver", sponsors: [
-        { name: "Portfolio Insider", url: "/Portfolio_Insider.png" },
+        { name: "Portfolio Insider", url: "/Portfolio.png" },
         { name: "Microsoft", url: "/microsoft_0.png" }, 
         { name: "Huawei", url: "/huawei.png" },
         { name: "Citadel", url: "/Citadel.png" }
@@ -22,7 +22,7 @@ export default class Sponsors extends React.Component {
         { name: "Facebook", url: "/facebook.png" },
         { name: "Capital One", url: "/capital_one.png" },
         { name: "Google", url: "/google.png" },
-        { name: "Insight Partners", url: "/Insight_Partners.png" }
+        { name: "Insight Partners", url: "/insight.png" }
       ] }
     ];
     this.renderSponsor = this.renderSponsor.bind(this);
