@@ -10,8 +10,10 @@ export default class Sponsors extends React.Component {
         { name: "Jane Street", url: "/jane_street.png" },
       ] },
       { name: "Silver", sponsors: [
+        { name: "Portfolio Insider", url: "/Portfolio_Insider.png" },
         { name: "Microsoft", url: "/microsoft_0.png" }, 
-        { name: "Huawei", url: "/huawei.png" }
+        { name: "Huawei", url: "/huawei.png" },
+        { name: "Citadel", url: "/Citadel.png" }
       ] },
       { name: "Bronze", sponsors: [
         { name: "Bloomberg", url: "/Bloomberg.png" },
@@ -19,7 +21,8 @@ export default class Sponsors extends React.Component {
         { name: "Kensho", url: "/kensho.png" },
         { name: "Facebook", url: "/facebook.png" },
         { name: "Capital One", url: "/capital_one.png" },
-        { name: "Google", url: "/google.png" }
+        { name: "Google", url: "/google.png" },
+        { name: "Insight Partners", url: "/Insight_Partners.png" }
       ] }
     ];
     this.renderSponsor = this.renderSponsor.bind(this);
@@ -48,7 +51,7 @@ export default class Sponsors extends React.Component {
   render() {
     return (
       <Layout>
-        <h2 className={styles.title}>2020-21 Sponsors</h2>
+        <h2 className={styles.title}>2020-2021 Sponsors</h2>
         <div className={styles.wrap}>
           {this.sponsors.map(this.renderSponsorGroup)}
         </div>
