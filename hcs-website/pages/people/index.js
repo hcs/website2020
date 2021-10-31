@@ -10,107 +10,179 @@ export default class PeoplePage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.manasi = [
+    this.alexcheng = [
       {
-        name: "Manasi Maheshwari",
-        pic: "headshots/Manasi.png",
-        bio: "Manasi is a junior concentrating in CS. She hails from California and she lives in Currier House. She was involved in HSA DEV and Harvard Tech Review, and also starred in Gunghroo, the largest college student production in the world."
+        name: "Alex Cheng",
+        pic: "headshots/Alex_Cheng_2021.jpg",
+        bio: "No bio."
       }
     ];
-
-    this.andrea = [
+    
+    this.annawang = [
       {
-        name: "Andrea Zhang",
-        pic: "headshots/Andrea.png",
-        bio: "Andrea is a sophomore in Kirkland studying Applied Math/English. She hails from the lovely land of Basking Ridge, NJ. Besides HCS, she loves planning events for her house with HoCo and singing with the Radcliffe Choral Society."
+        name: "Anna Wang",
+        pic: "headshots/Anna_Wang_2021.jpg",
+        bio: "No bio."
       }
     ];
-
+    
+    this.cynthiachen = [
+      {
+        name: "Cynthia Chen",
+        pic: "headshots/Cynthia_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.davidhuang = [
+      {
+        name: "David Huang",
+        pic: "headshots/David_Huang_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.ericli = [
+      {
+        name: "Eric Li",
+        pic: "headshots/eric_li_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.ericshen = [
+      {
+        name: "Eric Shen",
+        pic: "headshots/Eric_Shen_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.ethanlee = [
+      {
+        name: "Ethan Lee",
+        pic: "headshots/Ethan_Lee_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.haneulshin = [
+      {
+        name: "Haneul Shin",
+        pic: "headshots/haneul_shin_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.isha = [
+      {
+        name: "Isha Sangani",
+        pic: "headshots/isha_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.justinye = [
+      {
+        name: "Justin Ye",
+        pic: "headshots/justin_ye_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.katherine = [
+      {
+        name: "Katherine McPhie",
+        pic: "headshots/Katherine_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.kelsey = [
+      {
+        name: "Kelsey Wu",
+        pic: "headshots/Kelsey_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.laurenchen = [
+      {
+        name: "Lauren Chen",
+        pic: "headshots/Lauren_Chen_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.maegan = [
+      {
+        name: "Maegan Jong",
+        pic: "headshots/Maegan_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.rakesh = [
+      {
+        name: "Rakesh Nori",
+        pic: "headshots/Rakesh_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.willcooper = [
+      {
+        name: "Will Cooper",
+        pic: "headshots/will_cooper_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.ryankim = [
+      {
+        name: "Ryan Kim",
+        pic: "headshots/ryan_kim_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.ericzhang = [
+      {
+        name: "Eric Zhang",
+        pic: "headshots/Default_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.sophiaho = [
+      {
+        name: "Sophia Ho",
+        pic: "headshots/Default_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.kevinmao = [
+      {
+        name: "Kevin Mao",
+        pic: "headshots/Default_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+    
+    this.jasminehuang = [
+      {
+        name: "Jasmine Huang",
+        pic: "headshots/Default_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+   
     this.vassilios = [
       {
         name: "Vassilios Kaxiras",
         pic: "headshots/Vassilios.png",
-        bio: "Vassilios is a rising sophomore concentrating in CS and living in Eliot House, originally from Belmont, MA."
-      }
-    ];
-
-    this.teddy = [
-      {
-        name: "Teddy Lin",
-        pic: "headshots/Teddy.png",
-        bio: "Teddy is a first-year student from Taiwan studying Computer Science and Economics. He lived in Wigglesworth last year and he'll live in Eliot for the next three years (hopefully). Besides HCS, he is involved in Harvard College Film Festival (HCFF) and Harvard Student Agencies (HSA). In his free time, he loves watching documentaries about financial scandals (aka Dirty Money), playing ping pong, learning foreign languages, and hanging out with friends. His favorite foods in the square are Jefe's burrito and Santouka ramen."
-      }
-    ];
-    
-    this.eric = [
-      {
-        name: "Eric Li",
-        pic: "headshots/Eric.jpg",
         bio: "No bio."
-      }
-    ];
-
-    this.haneul = [
-      {
-        name: "Haneul Shin",
-        pic: "headshots/Haneul.png",
-        bio: "Haneul is a rising sophomore from New Jersey studying Computer Science and Mathematics. She's excited to be living in Winthrop when she returns to campus! Other than serving as a Director of Technology for HCS, Haneul is involved in IvyHacks, HackHarvard, the Harvard-MIT Mathematics Tournament, and Harvard Gender Inclusivity in Math. When she’s not doing work, you can find her playing bridge, taking walks along the river, and playing foosball with friends!"
-      }
-    ];
-
-    this.ryan = [
-      {
-        name: "Ryan Kim",
-        pic: "headshots/Ryan.png",
-        bio: "Ryan is a junior in Mather originally from Fayetteville, Arkansas studying Computer Science and Bioengineering. Besides HCS, he is the Co-President of the Harvard Tech Review and entrenched within the Harvard entrepreneurship scene. In his free time, he loves trying the latest dance trends, learning new languages, coming up with new investment theses, and staying up to date with the latest tech trends. His absolute favorite in the square is Le's!"
-      },
-    ];
-
-    this.mike = [
-      {
-        name: "Mike Bao",
-        pic: "headshots/Mike.png",
-        bio: "Mike hasn't submitted his bio."
-      }
-    ];
-
-    this.william = [
-      {
-        name: "William Cooper",
-        pic: "headshots/William.png",
-        bio: "Will is a first-year (or sophomore?) planning on studying applied math and computer science. He lived in Stoughton South last year and will live in Kirkland house for the next three years. He also plays ice hockey and tennis, and sings in the University Choir. In his spare time, he loves watching hockey and tennis, playing piano, and hanging out for a good time. His favorite scent is a freshly opened can of tennis balls."
-      },
-    ];
-
-    this.mark = [
-      {
-        name: "Mark Pekala",
-        pic: "headshots/Mark.png",
-        bio: "Mark is a first-year student from the wonderful town of Minneapolis, MN studying Computer Science and living in Eliot House. He has an irrational fear of writing about himself in the third person. Outside of HCS, Mark spends his time crafting digital pranks as Technology Chair of Satire V and promoting security as Secretary of Defense of the Harvard College Stand Up Comic Society. He used to be really into running until he messed up his knee, and now spends a lot of time watching SNL and going for long bike rides. If found, please return Mark to Minneapolis for a $200 reward."
-      }
-    ];
-
-    this.ethan = [
-      {
-        name: "Ethan Lee",
-        pic: "headshots/Ethan.png",
-        bio: "Ethan is a first-year student from Needham, MA planning to study Computer Science and Statistics. He lived in Pennypacker as a first-year and will live as a fish of Cabot for the next three years. He is also involved in the Harvard Crimson, Harvard Open Data Project, Datamatch, and Satire V. In his free time, he loves watching Tottenham games (especially the ones where Tottenham win), trying to make music, and reading scary stories. His favorite foods are Felipe's nachos and CVS Cheez-its."
-      }
-    ];
-
-    this.maegan = [
-      {
-        name: "Maegan Jong",
-        pic: "headshots/Maegan.png",
-        bio: "Maegan is a first-year student from the Chicagoland area who will be living in Kirkland! She plans to study Statistics and Computer Science. Outside of HCS, Maegan is involved in Women Engineers Code (WECode) and Harvard Undergraduate Capital Partners (HUCP). When she's not doing classwork, you can catch Maegan dancing with Asian American Dance Troupe (AADT), taking nature walks, and exploring Boston with friends."
-      }
-    ];
-
-    this.anna = [
-      {
-        name: "Anna Wang",
-        pic: "headshots/Anna.png",
-        bio: "Anna is a sophomore in Cabot studying Computer Science. She is from Redmond, WA and loves the west coast, nature, and hiking, especially in the summertime. She is also a part of the Datamatch business team and loves spreading the love and community on campus. Anna has had past industry internships at Microsoft and Uber, and is currently exploring the world of tech start-ups as well. She has a huge weakness for snacks, teas, and boba, and has even learned how to make bubble tea from within her dorm room!"
       }
     ];
   }
@@ -128,42 +200,80 @@ export default class PeoplePage extends React.Component {
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>President | <strong>Co-Presidents</strong></h2>
               </div>
-              {this.manasi.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.andrea.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.annawang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ryankim.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Technology | <strong>Directors of Technology</strong></h2>
               </div>
               {this.vassilios.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.teddy.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.haneul.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.sophiaho.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Business | <strong>Directors of Business</strong></h2>
+                <h2 className={styles.h2}>Entrepreneurship | <strong>Directors of Entrepreneurship</strong></h2>
               </div>
-              {this.ryan.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.mike.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.rakesh.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.cynthiachen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Education | <strong>Directors of Education</strong></h2>
               </div>
-              {this.william.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.mark.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.willcooper.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ericzhang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Social Good | <strong>Directors of Tech For Social Good</strong></h2>
+                <h2 className={styles.h2}>Social Good | <strong>Director of Tech For Social Good</strong></h2>
               </div>
-              {this.eric.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ericli.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Product | <strong>Director of Product Lab</strong></h2>
+              </div>
+              {this.kelsey.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Relations | <strong>Directors of Relations</strong></h2>
+                <h2 className={styles.h2}>Relations | <strong>Director of Relations</strong></h2>
               </div>
-              {this.ethan.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               {this.maegan.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Community | <strong>Director of Community</strong></h2>
+                <h2 className={styles.h2}>Recruiting | <strong>Director of Recruiting</strong></h2>
               </div>
-              {this.anna.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.alexcheng.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Events | <strong>Directors of Events</strong></h2>
+              </div>
+              {this.davidhuang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ericshen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Sponsorships | <strong>Directors of Sponsorships</strong></h2>
+              </div>
+              {this.kevinmao.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.laurenchen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Design | <strong>Director of Design</strong></h2>
+              </div>
+              {this.justinye.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Community | <strong>Directors of Community</strong></h2>
+              </div>
+              {this.jasminehuang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.isha.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>Membership | <strong>Associate Director of Membership</strong></h2>
+              </div>
+              {this.katherine.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              
+              <div className={styles.wrapper}>
+                <h2 className={styles.h2}>DEI | <strong>Associate Directors of Diversity + Inclusion</strong></h2>
+              </div>
+              {this.haneulshin.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ethanlee.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
             </div>
           </div>
         </div>
