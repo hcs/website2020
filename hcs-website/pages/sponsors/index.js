@@ -51,7 +51,7 @@ export default class Sponsors extends React.Component {
   render() {
     return (
       <Layout>
-        <h2 className={styles.title}>2020-2021 Sponsors</h2>
+        <h2 className={styles.title}>Our Sponsors</h2>
         <div className={styles.wrap}>
           {this.sponsors.map(this.renderSponsorGroup)}
         </div>

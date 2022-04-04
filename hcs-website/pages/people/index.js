@@ -41,11 +41,27 @@ export default class PeoplePage extends React.Component {
         bio: "No bio."
       }
     ];
+
+    this.dougyang = [
+      {
+        name: "Doug Yang",
+        pic: "headshots/Doug_Yang_2022.jpg",
+        bio: "No bio."
+      }
+    ];
     
     this.ericli = [
       {
         name: "Eric Li",
         pic: "headshots/eric_li_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.erictang = [
+      {
+        name: "Eric Tang",
+        pic: "headshots/Eric_Tang_2022.jpg",
         bio: "No bio."
       }
     ];
@@ -62,6 +78,14 @@ export default class PeoplePage extends React.Component {
       {
         name: "Ethan Lee",
         pic: "headshots/Ethan_Lee_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.ethanshaotran = [
+      {
+        name: "Ethan Shaotran",
+        pic: "headshots/Ethan_Shaotran_2022.jpg",
         bio: "No bio."
       }
     ];
@@ -97,6 +121,14 @@ export default class PeoplePage extends React.Component {
         bio: "No bio."
       }
     ];
+
+    this.kellyding = [
+      {
+        name: "Kelly Ding",
+        pic: "headshots/Kelly_Ding_2022.jpg",
+        bio: "No bio."
+      }
+    ];
     
     this.kelsey = [
       {
@@ -118,6 +150,30 @@ export default class PeoplePage extends React.Component {
       {
         name: "Maegan Jong",
         pic: "headshots/Maegan_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.matttengtrakool = [
+      {
+        name: "Matt Tengtrakool",
+        pic: "headshots/Matt_Tengtrakool_2022.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.michaelyoung = [
+      {
+        name: "Michael Young",
+        pic: "headshots/Michael_Young_2022.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.michaelzhao = [
+      {
+        name: "Michael Zhao",
+        pic: "headshots/Michael_Zhao_2022.jpg",
         bio: "No bio."
       }
     ];
@@ -150,6 +206,14 @@ export default class PeoplePage extends React.Component {
       {
         name: "Eric Zhang",
         pic: "headshots/Default_2021.jpg",
+        bio: "No bio."
+      }
+    ];
+
+    this.shreyasiyer = [
+      {
+        name: "Shreyas Iyer",
+        pic: "headshots/Shreyas_Iyer_2022.jpg",
         bio: "No bio."
       }
     ];
@@ -200,26 +264,19 @@ export default class PeoplePage extends React.Component {
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>President | <strong>Co-Presidents</strong></h2>
               </div>
-              {this.annawang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.ryankim.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.maegan.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.willcooper.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Technology | <strong>Directors of Technology</strong></h2>
+                <h2 className={styles.h2}>Technology | <strong>Director of Technology</strong></h2>
               </div>
-              {this.vassilios.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.sophiaho.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-
-              <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Entrepreneurship | <strong>Directors of Entrepreneurship</strong></h2>
-              </div>
-              {this.rakesh.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.cynthiachen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.ethanshaotran.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
 
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Education | <strong>Directors of Education</strong></h2>
               </div>
-              {this.willcooper.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.ericzhang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.erictang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.shreyasiyer.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Social Good | <strong>Director of Tech For Social Good</strong></h2>
@@ -237,21 +294,15 @@ export default class PeoplePage extends React.Component {
               {this.maegan.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Recruiting | <strong>Director of Recruiting</strong></h2>
-              </div>
-              {this.alexcheng.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              
-              <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Events | <strong>Directors of Events</strong></h2>
               </div>
-              {this.davidhuang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.ericshen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.kellyding.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.michaelzhao.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Sponsorships | <strong>Directors of Sponsorships</strong></h2>
+                <h2 className={styles.h2}>Sponsorships | <strong>Director of Finance</strong></h2>
               </div>
-              {this.kevinmao.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.laurenchen.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.dougyang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
                 <h2 className={styles.h2}>Design | <strong>Director of Design</strong></h2>
@@ -259,21 +310,15 @@ export default class PeoplePage extends React.Component {
               {this.justinye.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
               
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Community | <strong>Directors of Community</strong></h2>
+                <h2 className={styles.h2}>Community | <strong>Director of Community</strong></h2>
               </div>
-              {this.jasminehuang.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.isha.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              
+              {this.michaelyoung.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+
               <div className={styles.wrapper}>
-                <h2 className={styles.h2}>Membership | <strong>Associate Director of Membership</strong></h2>
-              </div>
-              {this.katherine.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              
-              <div className={styles.wrapper}>
-                <h2 className={styles.h2}>DEI | <strong>Associate Directors of Diversity + Inclusion</strong></h2>
+                <h2 className={styles.h2}>DEI | <strong> Directors of Mentorship</strong></h2>
               </div>
               {this.haneulshin.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
-              {this.ethanlee.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
+              {this.matttengtrakool.map(item => <PeopleItem name={item.name} pic={item.pic} bio={item.bio} />)}
             </div>
           </div>
         </div>

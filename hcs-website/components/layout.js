@@ -19,7 +19,7 @@ export default class Layout extends React.Component {
         },
         {
           href: "/comp", title: "Get Involved", right: true, subitems: [
-            { href: "/comp", title: "Comp HCS" },
+            { href: "/comp", title: "Join HCS" },
             { href: "/bipdemo", title: "BIP" },
             { href: "/bipoh", title: "Tech Office Hours" },
             { href: "https://socialgood.hcs.harvard.edu", title: "Social Good" }
@@ -107,7 +107,7 @@ export default class Layout extends React.Component {
         </div>
         {this.props.children}
         <div className={styles.footer}>
-          <div className={styles.left}> &copy; Harvard Computer Society 2020. </div>
+          <div className={styles.left}> &copy; Harvard Computer Society 2022. </div>
           <div className={styles.right}> Contact Us: hcs-board (at) hcs (.harvard.edu)</div>
         </div>
       </div >
