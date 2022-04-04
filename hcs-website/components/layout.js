@@ -26,9 +26,10 @@ export default class Layout extends React.Component {
           ]
         },
         {
-          href: "/people", title: "Contact", right: true, subitems: [
-            { href: "/people", title: "HCS Board" }
-          ]
+          href: "/people", title: "Board", right: true
+          // , subitems: [
+            // { href: "/people", title: "HCS Board" }
+          // ]
         }
       ]
     };
