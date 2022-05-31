@@ -61,7 +61,7 @@ export default class PeoplePage extends React.Component {
     this.erictang = [
       {
         name: "Eric Tang",
-        pic: "headshots/Eric_Tang_2022.jpg",
+        pic: "headshots/Eric_Tang_2022.JPG",
         bio: "No bio."
       }
     ];
