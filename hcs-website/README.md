@@ -28,3 +28,7 @@ You can check out [the Next.js GitHub repository](https://github.com/zeit/next.j
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Deploy on AWS
+
+You can change the package.json script's "build" command to have "next build && next export" (instead of just "next build") to additionally export the website to the "out" folder. You can upload these files to HCS' hcs-website-2022 S3 bucket. See [article](https://dev.to/hossamelmansy/hosting-static-next-js-website-on-aws-s3-32lm) for specific steps. Contact Ethan with questions.
